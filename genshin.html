@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Genshin Impact</title>
+  <link rel="icon" href="https://i.ibb.co/mq0L79c/fire-icon.png" type="image/png">
+  <style>
+    body {
+      font-family: 'Tahoma', sans-serif;
+      margin: 0;
+      background-color: #fff0f8;
+      overflow-x: hidden;
+    }
+
+    .header {
+      background-image: url('https://i.ibb.co/cX2f3d5N/IMG-0051.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 40px 20px;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    .header h1 {
+      background-color: rgba(0, 0, 0, 0.5);
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 10px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      padding: 15px;
+      position: relative;
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: flicker 3s infinite;
+    }
+
+    .card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 0 20px #ff007f, 0 0 30px #ff007f;
+    }
+
+    @keyframes boom {
+      0% { transform: translateX(-50%) scale(1); }
+      100% { transform: translateX(-50%) scale(1.2); }
+    }
+
+    @keyframes flicker {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.95; }
+    }
+
+    .product-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .product-title {
+      font-size: 18px;
+      font-weight: bold;
+      color: #d63384;
+      margin-bottom: 5px;
+    }
+
+    .tag {
+      display: inline-block;
+      background-color: #ffe0f0;
+      color: #8a0057;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+
+    .product-info {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .line-button, .fb-button {
+      display: block;
+      text-align: center;
+      color: white;
+      padding: 10px;
+      font-size: 14px;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      margin-top: 10px;
+      transition: background-color 0.3s;
+    }
+
+    .line-button {
+      background-color: #00b900;
+    }
+
+    .line-button:hover {
+      background-color: #009e00;
+    }
+
+    .fb-button {
+      background-color: #1877f2;
+    }
+
+    .fb-button:hover {
+      background-color: #145bd1;
+    }
+
+    .back-link {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .back-link a {
+      color: #d63384;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .back-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Genshin Impact</h1>
+  </div>
+
+  <div class="container">
+    <div class="grid">
+
+      <!-- ID 001 -->
+      <div class="card">
+        <img class="product-img" src="https://i.ibb.co/BHQFMyZx/IMG-0053.jpg" alt="ไอดี 𝗭𝗲𝗻𝗹𝗲𝘀𝘀 - A001">
+        <div class="product-title">ไอดี Genshin Impact </div>
+        <div class="tag">ยังไม่ผูกเมล</div>
+        <div class="product-info">
+          - ตัวละครเริ่มต้น<br>
+          - ราคาพิเศษ: <strong>99 บาท</strong>
+        </div>
+        <a class="line-button" href="https://line.me/ti/p/~monne.luv" target="_blank">สั่งซื้อผ่าน LINE</a>
+        <a class="fb-button" href="https://th-th.facebook.com/profile.php?id=61573228961641" target="_blank">สั่งซื้อผ่าน Facebook</a>
+      </div>
+
+      <!-- ID 002 -->
+      <div class="card">
+        <img class="product-img" src="https://i.ibb.co/BHQFMyZx/IMG-0053.jpg" alt="ไอดี 𝗭𝗲𝗻𝗹𝗲𝘀𝘀 - A002">
+        <div class="product-title">ไอดี Genshin Impact </div>
+        <div class="tag">ยังไม่ผูกเมล</div>
+        <div class="product-info">
+          - ตัวละครเริ่มต้น<br>
+          - ราคาพิเศษ: <strong>99 บาท</strong>
+        </div>
+        <a class="line-button" href="https://line.me/ti/p/~monne.luv" target="_blank">สั่งซื้อผ่าน LINE</a>
+        <a class="fb-button" href="https://th-th.facebook.com/profile.php?id=61573228961641" target="_blank">สั่งซื้อผ่าน Facebook</a>
+      </div>
+
+    </div>
+
+    <div class="back-link">
+      <a href="index.html">← กลับหน้าหลัก</a>
+    </div>
+  </div>
+
+</body>
+</html>

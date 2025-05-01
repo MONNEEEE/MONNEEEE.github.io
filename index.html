@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ร้านขายไอดีเกม MONNE</title>
+  <style>
+    /* [สไตล์เดิมทั้งหมดตามที่ให้มา กูไม่ตัดออกเพราะบอกว่าให้โค้ดเต็ม] */
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      margin: 0;
+      background: #fff0f6;
+      transition: opacity 0.5s ease;
+      color: #660033;
+    }
+    body.fade-out {
+      opacity: 0;
+    }
+    .header {
+      background: #ffcce6;
+      padding: 15px 20px;
+      text-align: center;
+      box-shadow: 0 6px 15px rgba(255, 153, 204, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .header img {
+      height: 80px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+    .store-banner {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background-color: #ffe6f0;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(255, 153, 204, 0.4);
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+    .store-banner img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 5px solid #ffcce6;
+      box-shadow: 0 0 20px #ff99cc;
+      object-fit: cover;
+    }
+    .store-info h2 {
+      margin: 0;
+      color: #660033;
+      font-size: 2rem;
+      font-weight: 900;
+      letter-spacing: 1px;
+      text-shadow: 1px 1px 0 #ffd6e8;
+    }
+    .tag-container {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+    .tag {
+      background: #ffb3d1;
+      color: #660033;
+      padding: 8px 14px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: bold;
+      box-shadow: 1px 1px 5px rgba(102, 0, 51, 0.4);
+      user-select: none;
+      transition: background 0.3s;
+    }
+    .tag:hover {
+      background: #ff80b3;
+      color: #fff0f6;
+      box-shadow: 2px 2px 10px rgba(255, 51, 102, 0.7);
+    }
+    .search-box {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .search-box input {
+      padding: 15px 20px;
+      width: 90%;
+      max-width: 450px;
+      border-radius: 40px;
+      border: 2px solid #ffcce6;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #660033;
+      outline: none;
+      transition: 0.3s;
+      box-shadow: 0 4px 10px rgba(255, 153, 204, 0.3);
+      background-color: #fff0f6;
+    }
+    .search-box input::placeholder {
+      color: #ffb3d1;
+      font-style: italic;
+    }
+    .search-box input:focus {
+      border-color: #ff80b3;
+      box-shadow: 0 6px 18px rgba(255, 51, 102, 0.6);
+      background-color: #ffe6f0;
+    }
+    .no-result {
+      text-align: center;
+      color: #660033;
+      font-weight: 900;
+      font-size: 18px;
+      background-color: #ffb3d1;
+      padding: 15px 20px;
+      border-radius: 30px;
+      box-shadow: 0 4px 10px rgba(102, 0, 51, 0.5);
+      display: none;
+      margin-top: 10px;
+      user-select: none;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 25px;
+    }
+    .product-card {
+      background: #fff0f6;
+      border: 3px solid #ff99cc;
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 10px 15px rgba(255, 153, 204, 0.3);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      color: #660033;
+    }
+    .product-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(255, 102, 178, 0.7);
+    }
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      border-radius: 15px;
+      object-fit: cover;
+      margin-bottom: 15px;
+      box-shadow: 0 6px 12px rgba(255, 153, 204, 0.4);
+      transition: transform 0.3s ease;
+    }
+    .product-card:hover img {
+      transform: scale(1.05);
+    }
+    .product-title {
+      font-size: 18px;
+      font-weight: 900;
+      color: #660033;
+      margin-bottom: 8px;
+      text-align: center;
+      text-shadow: 1px 1px 2px #ffd6e8;
+      user-select: none;
+    }
+    .nametag {
+      background-color: #ff80b3;
+      color: #fff0f6;
+      padding: 8px 14px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 700;
+      display: inline-block;
+      user-select: none;
+      text-align: center;
+      box-shadow: 0 3px 10px rgba(255, 51, 102, 0.6);
+    }
+  </style>
+
+  <script>
+    function goToPage(url) {
+      document.body.classList.add('fade-out');
+      setTimeout(() => {
+        window.location.href = url;
+      }, 500);
+    }
+
+    function searchProduct() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const products = document.querySelectorAll('.product-card');
+      const noResult = document.getElementById('noResult');
+      let found = false;
+
+      products.forEach((p) => {
+        const text = p.innerText.toLowerCase();
+        const match = text.includes(input);
+        p.style.display = match ? 'block' : 'none';
+        if (match) found = true;
+      });
+
+      noResult.style.display = found ? 'none' : 'block';
+    }
+
+    window.onload = function () {
+      const cards = document.querySelectorAll('.product-card');
+      cards.forEach((card, index) => {
+        setTimeout(() => {
+          card.style.opacity = 1;
+          card.style.transform = 'translateY(0)';
+        }, index * 150);
+      });
+
+      // ใส่จำนวนสินค้าในแท็ก
+      const total = cards.length;
+      const nameTags = document.querySelectorAll('.nametag.count-products');
+      nameTags.forEach((tag) => {
+        tag.textContent = `ทั้งหมด ${total} สินค้า`;
+      });
+    };
+  </script>
+</head>
+
+<body>
+  <div class="header">
+    <img src="https://i.ibb.co/FbBpdZsv/png-removebg-preview-2.png" alt="โลโก้ MONNE" />
+  </div>
+
+  <div class="container">
+    <div class="store-banner">
+      <img src="https://i.ibb.co/KxtphRTP/IMG-0155.jpg" alt="Store Image" />
+      <div class="store-info">
+        <h2>MONNE</h2>
+        <div class="tag-container">
+          <div class="tag">เปิดร้านทุกวันอาทิตย</div>
+          <div class="tag">ไอดีราคาถูก</div>
+          <div class="tag">ไอดีเกมดองเพชร</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="search-box">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="ค้นหาสินค้า..."
+        onkeyup="searchProduct()"
+      />
+    </div>
+
+    <div class="no-result" id="noResult">ไม่พบผลลัพธ์</div>
+
+    <!-- ID 001 -->
+    <div class="product-grid">
+      <div class="product-card" onclick="goToPage('zzz.html')">
+        <img src="https://i.ibb.co/q3s6LbNd/IMG-0022.jpg" alt="Product" />
+        <div class="product-title">ไอดีเกม Zenless Zone Zero</div>
+        <div class="nametag">ขายดี</div>
+      </div>
+
+      <!-- ID 002 -->
+      <div class="product-card" onclick="goToPage('genshin.html')">
+        <img src="https://i.ibb.co/XkdHSS9D/IMG-0051.jpg" alt="Product" />
+        <div class="product-title">ไอดีเกม Genshin Impact</div>
+        <div class="nametag count-products">ใหม่</div>
+      </div>
+
+      <!-- ID 003 -->
+      <div class="product-card" onclick="goToPage('Arknights.html')">
+        <img src="https://i.ibb.co/GvDQTksX/IMG-0024.jpg" alt="Product" />
+        <div class="product-title">ไอดีเกม Arknights</div>
+        <div class="nametag count-productsj">ใหม่</div>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>
