@@ -1,11 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="th">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ร้านขายไอดีเกม MONNE</title>
+  <title>ร้านขายไอดีเกม MONNE สุดคาวาอี้</title>
   <style>
-    /* [สไตล์เดิมทั้งหมดตามที่ให้มา กูไม่ตัดออกเพราะบอกว่าให้โค้ดเต็ม] */
+    /* [สไตล์เดิมทั้งหมดตามที่ให้มา] */
     body {
       font-family: 'Comic Sans MS', cursive, sans-serif;
       margin: 0;
@@ -136,6 +137,9 @@
       cursor: pointer;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       color: #660033;
+      /* ทำให้ตำแหน่งซากุระอิงกับ card ได้ */
+      position: relative; 
+      overflow: hidden;
     }
     .product-card:hover {
       transform: translateY(-10px);
@@ -174,10 +178,41 @@
       text-align: center;
       box-shadow: 0 3px 10px rgba(255, 51, 102, 0.6);
     }
+
+    /* --- สไตล์ CSS สำหรับดอกซากุระร่วง --- */
+    .sakura-petal {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: #ffcce6;
+      border-radius: 50% 50% 0 50%; /* รูปร่างกลีบดอกไม้ */
+      pointer-events: none; /* ทำให้คลิกทะลุกลีบดอกไม้ไปที่ปุ่มได้ */
+      opacity: 0;
+      animation: fall ease-out forwards;
+      z-index: 10;
+      box-shadow: 0 0 3px #ffb3d1;
+    }
+
+    @keyframes fall {
+      0% {
+        opacity: 0;
+        transform: translate(0, 0) rotate(0deg);
+      }
+      30% {
+        opacity: 1;
+        transform: translate(var(--dx), var(--dy)) rotate(var(--deg));
+      }
+      100% {
+        opacity: 0;
+        transform: translate(var(--dx-end), var(--dy-end)) rotate(var(--deg-end));
+      }
+    }
+
   </style>
 
   <script>
     function goToPage(url) {
+      // ฟังก์ชันเดิมสำหรับเปลี่ยนหน้า
       document.body.classList.add('fade-out');
       setTimeout(() => {
         window.location.href = url;
@@ -185,6 +220,7 @@
     }
 
     function searchProduct() {
+      // ฟังก์ชันเดิมสำหรับค้นหาสินค้า
       const input = document.getElementById('searchInput').value.toLowerCase();
       const products = document.querySelectorAll('.product-card');
       const noResult = document.getElementById('noResult');
@@ -201,6 +237,7 @@
     }
 
     window.onload = function () {
+      // ฟังก์ชันเดิมตอนโหลดหน้า
       const cards = document.querySelectorAll('.product-card');
       cards.forEach((card, index) => {
         setTimeout(() => {
@@ -209,13 +246,53 @@
         }, index * 150);
       });
 
-      // ใส่จำนวนสินค้าในแท็ก
       const total = cards.length;
       const nameTags = document.querySelectorAll('.nametag.count-products');
       nameTags.forEach((tag) => {
         tag.textContent = `ทั้งหมด ${total} สินค้า`;
       });
     };
+    
+    // --- สคริปต์ JavaScript สำหรับดอกซากุระร่วง ---
+    // ฟังเหตุการณ์คลิกทั่วทั้งหน้า
+    document.addEventListener('click', function(event) {
+        // เรียกใช้ฟังก์ชันสร้างดอกไม้ตรงตำแหน่งที่คลิก
+        createSakuraEffect(event.clientX, event.clientY);
+    });
+
+    function createSakuraEffect(x, y) {
+        const numberOfPetals = 8; // จำนวนกลีบดอกไม้ต่อการคลิก
+        for (let i = 0; i < numberOfPetals; i++) {
+            const petal = document.createElement('div');
+            petal.classList.add('sakura-petal');
+            
+            // ตำแหน่งเริ่มต้น (จากเมาส์ที่คลิก)
+            petal.style.left = `${x}px`;
+            petal.style.top = `${y}px`;
+
+            // สุ่มทิศทางการเคลื่อนที่และหมุน
+            const dx = (Math.random() - 0.5) * 200 + 'px';
+            const dy = Math.random() * 200 + 'px';
+            const deg = Math.random() * 720 + 'deg';
+            const degEnd = Math.random() * 1000 + 'deg';
+            const duration = Math.random() * 1.5 + 1.5; // สุ่มระยะเวลา 1.5 ถึง 3 วินาที
+
+            petal.style.setProperty('--dx', dx);
+            petal.style.setProperty('--dy', dy);
+            petal.style.setProperty('--deg', deg);
+            petal.style.setProperty('--dx-end', (Math.random() - 0.5) * 400 + 'px');
+            petal.style.setProperty('--dy-end', Math.random() * 300 + 250 + 'px');
+            petal.style.setProperty('--deg-end', degEnd);
+            petal.style.animationDuration = `${duration}s`;
+
+            document.body.appendChild(petal);
+
+            // ลบกลีบดอกไม้ออกจาก DOM หลังจาก animation จบ
+            petal.addEventListener('animationend', () => {
+                petal.remove();
+            });
+        }
+    }
   </script>
 </head>
 
