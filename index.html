@@ -1,360 +1,179 @@
-
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ร้านขายไอดีเกม MONNE สุดคาวาอี้</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bon Shop</title>
+
   <style>
-    /* [สไตล์เดิมทั้งหมดตามที่ให้มา] */
+    /* ฟอนต์ */
+    @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap');
+
     body {
-      font-family: 'Comic Sans MS', cursive, sans-serif;
       margin: 0;
-      background: #fff0f6;
-      transition: opacity 0.5s ease;
-      color: #660033;
+      font-family: "Kanit", sans-serif;
+      background: linear-gradient(135deg,#ffd6e8,#fff0f6,#ffe6f2);
+      background-attachment: fixed;
     }
-    body.fade-out {
-      opacity: 0;
-    }
+
+    /* HEADER */
     .header {
-      background: #ffcce6;
-      padding: 15px 20px;
+      background: rgba(255, 210, 230, 0.75);
+      backdrop-filter: blur(10px);
+      padding: 25px 10px 35px;
       text-align: center;
-      box-shadow: 0 6px 15px rgba(255, 153, 204, 0.5);
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      border-bottom: 2px solid rgba(255,170,200,0.4);
+      box-shadow: 0 4px 20px rgba(255,100,150,0.25);
     }
-    .header img {
-      height: 80px;
-    }
-    .container {
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 20px;
-    }
-    .store-banner {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      background-color: #ffe6f0;
-      padding: 20px;
-      border-radius: 20px;
-      box-shadow: 0 6px 20px rgba(255, 153, 204, 0.4);
-      margin-bottom: 30px;
-      flex-wrap: wrap;
-    }
-    .store-banner img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      border: 5px solid #ffcce6;
-      box-shadow: 0 0 20px #ff99cc;
-      object-fit: cover;
-    }
-    .store-info h2 {
+
+    .header h1 {
       margin: 0;
-      color: #660033;
-      font-size: 2rem;
-      font-weight: 900;
-      letter-spacing: 1px;
-      text-shadow: 1px 1px 0 #ffd6e8;
+      font-size: 32px;
+      font-weight: 600;
+      color: #ff4f94;
+      text-shadow: 0 2px 6px rgba(255,70,130,0.4);
     }
-    .tag-container {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-top: 10px;
+
+    .header p {
+      margin: 6px 0 0;
+      color: #ff7fb4;
+      font-size: 18px;
     }
-    .tag {
-      background: #ffb3d1;
-      color: #660033;
-      padding: 8px 14px;
-      border-radius: 30px;
-      font-size: 14px;
-      font-weight: bold;
-      box-shadow: 1px 1px 5px rgba(102, 0, 51, 0.4);
-      user-select: none;
-      transition: background 0.3s;
-    }
-    .tag:hover {
-      background: #ff80b3;
-      color: #fff0f6;
-      box-shadow: 2px 2px 10px rgba(255, 51, 102, 0.7);
-    }
+
+    /* SEARCH */
     .search-box {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    .search-box input {
-      padding: 15px 20px;
+      margin: 20px auto;
       width: 90%;
       max-width: 450px;
-      border-radius: 40px;
-      border: 2px solid #ffcce6;
-      font-size: 1.2rem;
-      font-weight: bold;
-      color: #660033;
-      outline: none;
-      transition: 0.3s;
-      box-shadow: 0 4px 10px rgba(255, 153, 204, 0.3);
-      background-color: #fff0f6;
+      position: relative;
     }
-    .search-box input::placeholder {
-      color: #ffb3d1;
-      font-style: italic;
-    }
-    .search-box input:focus {
-      border-color: #ff80b3;
-      box-shadow: 0 6px 18px rgba(255, 51, 102, 0.6);
-      background-color: #ffe6f0;
-    }
-    .no-result {
-      text-align: center;
-      color: #660033;
-      font-weight: 900;
-      font-size: 18px;
-      background-color: #ffb3d1;
-      padding: 15px 20px;
+
+    .search-box input {
+      width: 100%;
+      padding: 12px 20px 12px 45px;
       border-radius: 30px;
-      box-shadow: 0 4px 10px rgba(102, 0, 51, 0.5);
-      display: none;
-      margin-top: 10px;
-      user-select: none;
+      border: none;
+      font-size: 16px;
+      box-shadow: 0 4px 16px rgba(255,100,150,0.25);
+      outline: none;
     }
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-      gap: 25px;
+
+    .search-box i {
+      position: absolute;
+      top: 50%;
+      left: 15px;
+      transform: translateY(-50%);
+      font-size: 18px;
+      color: #ff4f94;
     }
-    .product-card {
-      background: #fff0f6;
-      border: 3px solid #ff99cc;
-      border-radius: 20px;
+
+    /* STORE BANNER */
+    .store-banner {
+      margin: 20px auto;
+      width: 92%;
+      max-width: 600px;
+      background: white;
       padding: 20px;
-      box-shadow: 0 10px 15px rgba(255, 153, 204, 0.3);
-      cursor: pointer;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      color: #660033;
-      /* ทำให้ตำแหน่งซากุระอิงกับ card ได้ */
-      position: relative; 
+      border-radius: 25px;
+      box-shadow: 0 4px 20px rgba(255,100,150,0.25);
+      text-align: center;
+    }
+
+    .store-banner img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(255,100,150,0.3);
+    }
+
+    /* BADGE ความน่าเชื่อถือ */
+    .trust-badge {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
+    }
+    .trust-item {
+      width: 32%;
+      background: #fff;
+      padding: 12px 5px;
+      border-radius: 15px;
+      font-size: 14px;
+      box-shadow: 0 4px 15px rgba(255,100,150,0.2);
+      color: #ff4f94;
+    }
+
+    /* PRODUCT GRID */
+    .product-grid {
+      width: 92%;
+      margin: 20px auto 60px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 15px;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 20px;
       overflow: hidden;
+      box-shadow: 0 4px 15px rgba(255,100,150,0.25);
+      transition: .25s;
     }
+
     .product-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 30px rgba(255, 102, 178, 0.7);
+      transform: translateY(-6px);
+      box-shadow: 0 8px 25px rgba(255,100,150,0.35);
     }
+
     .product-card img {
       width: 100%;
-      height: 180px;
-      border-radius: 15px;
-      object-fit: cover;
-      margin-bottom: 15px;
-      box-shadow: 0 6px 12px rgba(255, 153, 204, 0.4);
-      transition: transform 0.3s ease;
     }
-    .product-card:hover img {
-      transform: scale(1.05);
-    }
-    .product-title {
-      font-size: 18px;
-      font-weight: 900;
-      color: #660033;
-      margin-bottom: 8px;
+
+    .product-info {
+      padding: 12px;
+      color: #ff4f94;
+      font-weight: 500;
       text-align: center;
-      text-shadow: 1px 1px 2px #ffd6e8;
-      user-select: none;
     }
-    .nametag {
-      background-color: #ff80b3;
-      color: #fff0f6;
-      padding: 8px 14px;
-      border-radius: 30px;
-      font-size: 14px;
-      font-weight: 700;
-      display: inline-block;
-      user-select: none;
-      text-align: center;
-      box-shadow: 0 3px 10px rgba(255, 51, 102, 0.6);
-    }
-
-    /* --- สไตล์ CSS สำหรับดอกซากุระร่วง --- */
-    .sakura-petal {
-      position: absolute;
-      width: 10px;
-      height: 10px;
-      background-color: #ffcce6;
-      border-radius: 50% 50% 0 50%; /* รูปร่างกลีบดอกไม้ */
-      pointer-events: none; /* ทำให้คลิกทะลุกลีบดอกไม้ไปที่ปุ่มได้ */
-      opacity: 0;
-      animation: fall ease-out forwards;
-      z-index: 10;
-      box-shadow: 0 0 3px #ffb3d1;
-    }
-
-    @keyframes fall {
-      0% {
-        opacity: 0;
-        transform: translate(0, 0) rotate(0deg);
-      }
-      30% {
-        opacity: 1;
-        transform: translate(var(--dx), var(--dy)) rotate(var(--deg));
-      }
-      100% {
-        opacity: 0;
-        transform: translate(var(--dx-end), var(--dy-end)) rotate(var(--deg-end));
-      }
-    }
-
   </style>
 
-  <script>
-    function goToPage(url) {
-      // ฟังก์ชันเดิมสำหรับเปลี่ยนหน้า
-      document.body.classList.add('fade-out');
-      setTimeout(() => {
-        window.location.href = url;
-      }, 500);
-    }
-
-    function searchProduct() {
-      // ฟังก์ชันเดิมสำหรับค้นหาสินค้า
-      const input = document.getElementById('searchInput').value.toLowerCase();
-      const products = document.querySelectorAll('.product-card');
-      const noResult = document.getElementById('noResult');
-      let found = false;
-
-      products.forEach((p) => {
-        const text = p.innerText.toLowerCase();
-        const match = text.includes(input);
-        p.style.display = match ? 'block' : 'none';
-        if (match) found = true;
-      });
-
-      noResult.style.display = found ? 'none' : 'block';
-    }
-
-    window.onload = function () {
-      // ฟังก์ชันเดิมตอนโหลดหน้า
-      const cards = document.querySelectorAll('.product-card');
-      cards.forEach((card, index) => {
-        setTimeout(() => {
-          card.style.opacity = 1;
-          card.style.transform = 'translateY(0)';
-        }, index * 150);
-      });
-
-      const total = cards.length;
-      const nameTags = document.querySelectorAll('.nametag.count-products');
-      nameTags.forEach((tag) => {
-        tag.textContent = `ทั้งหมด ${total} สินค้า`;
-      });
-    };
-    
-    // --- สคริปต์ JavaScript สำหรับดอกซากุระร่วง ---
-    // ฟังเหตุการณ์คลิกทั่วทั้งหน้า
-    document.addEventListener('click', function(event) {
-        // เรียกใช้ฟังก์ชันสร้างดอกไม้ตรงตำแหน่งที่คลิก
-        createSakuraEffect(event.clientX, event.clientY);
-    });
-
-    function createSakuraEffect(x, y) {
-        const numberOfPetals = 8; // จำนวนกลีบดอกไม้ต่อการคลิก
-        for (let i = 0; i < numberOfPetals; i++) {
-            const petal = document.createElement('div');
-            petal.classList.add('sakura-petal');
-            
-            // ตำแหน่งเริ่มต้น (จากเมาส์ที่คลิก)
-            petal.style.left = `${x}px`;
-            petal.style.top = `${y}px`;
-
-            // สุ่มทิศทางการเคลื่อนที่และหมุน
-            const dx = (Math.random() - 0.5) * 200 + 'px';
-            const dy = Math.random() * 200 + 'px';
-            const deg = Math.random() * 720 + 'deg';
-            const degEnd = Math.random() * 1000 + 'deg';
-            const duration = Math.random() * 1.5 + 1.5; // สุ่มระยะเวลา 1.5 ถึง 3 วินาที
-
-            petal.style.setProperty('--dx', dx);
-            petal.style.setProperty('--dy', dy);
-            petal.style.setProperty('--deg', deg);
-            petal.style.setProperty('--dx-end', (Math.random() - 0.5) * 400 + 'px');
-            petal.style.setProperty('--dy-end', Math.random() * 300 + 250 + 'px');
-            petal.style.setProperty('--deg-end', degEnd);
-            petal.style.animationDuration = `${duration}s`;
-
-            document.body.appendChild(petal);
-
-            // ลบกลีบดอกไม้ออกจาก DOM หลังจาก animation จบ
-            petal.addEventListener('animationend', () => {
-                petal.remove();
-            });
-        }
-    }
-  </script>
 </head>
-
 <body>
-  <div class="header">
-    <img src="https://i.ibb.co/FbBpdZsv/png-removebg-preview-2.png" alt="โลโก้ MONNE" />
-  </div>
 
-  <div class="container">
-    <div class="store-banner">
-      <img src="https://i.ibb.co/KxtphRTP/IMG-0155.jpg" alt="Store Image" />
-      <div class="store-info">
-        <h2>MONNE</h2>
-        <div class="tag-container">
-          <div class="tag">เปิดร้านทุกวันอาทิตย</div>
-          <div class="tag">ไอดีราคาถูก</div>
-          <div class="tag">ไอดีเกมดองเพชร</div>
-        </div>
-      </div>
-    </div>
+  <div class="header">
+    <h1>Bon Shop</h1>
+    <p>บริการขายไอดีเกมแท้ พร้อมส่ง ปลอดภัย 100%</p>
 
     <div class="search-box">
-      <input
-        type="text"
-        id="searchInput"
-        placeholder="ค้นหาสินค้า..."
-        onkeyup="searchProduct()"
-      />
-    </div>
-
-    <div class="no-result" id="noResult">ไม่พบผลลัพธ์</div>
-
-    <!-- ID 001 -->
-    <div class="product-grid">
-      <div class="product-card" onclick="goToPage('zzz.html')">
-        <img src="https://i.ibb.co/q3s6LbNd/IMG-0022.jpg" alt="Product" />
-        <div class="product-title">ไอดีเกม Zenless Zone Zero Thai [ASIA] </div>
-        <div class="nametag">ขายดี</div>
-      </div>
-
-      <!-- ID 002 -->
-      <div class="product-card" onclick="goToPage('genshin.html')">
-        <img src="https://i.ibb.co/XkdHSS9D/IMG-0051.jpg" alt="Product" />
-        <div class="product-title">ไอดีเกม Genshin Impact Thai [ASIA] </div>
-        <div class="nametag">ใหม่</div>
-      </div>
-      
-      <!-- ID 003 -->
-      <div class="product-card" onclick="goToPage('OUTERPLANE.html')">
-        <img src="https://i.ibb.co/qL6z0YNS/IMG-0394.jpg" alt="Product" />
-        <div class="product-title">ไอดีเกม OUTERPLANE </div>
-        <div class="nametag">ใหม่</div>
-      </div>
-
-      <!-- ID 004 -->
-      <div class="product-card" onclick="goToPage('Arknights.html')">
-        <img src="https://i.ibb.co/GvDQTksX/IMG-0024.jpg" alt="Product" />
-        <div class="product-title">ไอดีเกม Arknights</div>
-        <div class="nametag">ใหม่</div>
-
-      </div>
+      <i>🔍</i>
+      <input type="text" placeholder="ค้นหาเกม เช่น OUTERPLANE, Genshin, Blue Archive...">
     </div>
   </div>
+
+  <div class="store-banner">
+    <img src="https://i.ibb.co/KxtphRTP/IMG-0155.jpg">
+    <div class="trust-badge">
+      <div class="trust-item">✔️ ของแท้</div>
+      <div class="trust-item">⚡ ส่งโค้ดไว</div>
+      <div class="trust-item">💬 การันตีหลังขาย</div>
+    </div>
+  </div>
+
+  <!-- ตัวอย่างสินค้า -->
+  <div class="product-grid">
+    <div class="product-card">
+      <img src="https://i.ibb.co/4VJjV00/01.jpg">
+      <div class="product-info">ไอดี OUTERPLANE</div>
+    </div>
+
+    <div class="product-card">
+      <img src="https://i.ibb.co/j6LzBLk/02.jpg">
+      <div class="product-info">ไอดี Blue Archive</div>
+    </div>
+
+    <div class="product-card">
+      <img src="https://i.ibb.co/DDxK37s/03.jpg">
+      <div class="product-info">ไอดี Genshin Impact</div>
+    </div>
+  </div>
+
 </body>
 </html>
