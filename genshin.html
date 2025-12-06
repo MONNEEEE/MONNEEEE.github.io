@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Genshin Impact</title>
+  <title>Zenless Zone Zero</title>
   <link rel="icon" href="https://i.ibb.co/mq0L79c/fire-icon.png" type="image/png">
+
   <style>
     body {
       font-family: 'Tahoma', sans-serif;
@@ -14,7 +15,7 @@
     }
 
     .header {
-      background-image: url('https://i.ibb.co/cX2f3d5N/IMG-0051.jpg');
+      background-image: url('https://i.ibb.co/BHQFMyZx/IMG-0053.jpg');
       background-size: cover;
       background-position: center;
       padding: 40px 20px;
@@ -58,11 +59,6 @@
       box-shadow: 0 0 20px #ff007f, 0 0 30px #ff007f;
     }
 
-    @keyframes boom {
-      0% { transform: translateX(-50%) scale(1); }
-      100% { transform: translateX(-50%) scale(1.2); }
-    }
-
     @keyframes flicker {
       0%, 100% { opacity: 1; }
       50% { opacity: 0.95; }
@@ -97,35 +93,35 @@
       font-size: 14px;
       color: #555;
       line-height: 1.6;
+      margin-bottom: 12px;
     }
 
-    .line-button, .fb-button {
-      display: block;
-      text-align: center;
-      color: white;
+    .fb-button, .line-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
       padding: 10px;
-      font-size: 14px;
-      font-weight: bold;
       border-radius: 8px;
+      font-weight: bold;
+      color: white;
       text-decoration: none;
-      margin-top: 10px;
-      transition: background-color 0.3s;
-    }
-
-    .line-button {
-      background-color: #00b900;
-    }
-
-    .line-button:hover {
-      background-color: #009e00;
+      margin-top: 8px;
+      font-size: 14px;
     }
 
     .fb-button {
       background-color: #1877f2;
     }
-
     .fb-button:hover {
       background-color: #145bd1;
+    }
+
+    .line-button {
+      background-color: #00b900;
+    }
+    .line-button:hover {
+      background-color: #009400;
     }
 
     .back-link {
@@ -144,10 +140,11 @@
     }
   </style>
 </head>
+
 <body>
 
   <div class="header">
-    <h1>Genshin Impact</h1>
+    <h1>𝗭𝗲𝗻𝗹𝗲𝘀𝘀 𝗭𝗼𝗻𝗲 𝗭𝗲𝗿𝗼</h1>
   </div>
 
   <div class="container">
@@ -155,7 +152,7 @@
 
       <!-- ID 001 -->
       <div class="card">
-        <img class="product-img" src="https://i.ibb.co/cX2f3d5N/IMG-0051.jpg" alt="ไอดี 𝗭𝗲𝗻𝗹𝗲𝘀𝘀 - A001">
+        <img class="product-img" data-id="1" src="https://i.ibb.co/BHQFMyZx/IMG-0053.jpg" alt="">
         <div class="product-title">ไอดีเกม Genshin Impact </div>
         <div class="tag">ยังไม่ผูกเมล</div> <div class="tag">สินค้าหมด</div>
         <div class="product-info">
@@ -167,7 +164,7 @@
 
       <!-- ID 002 -->
       <div class="card">
-        <img class="product-img" src="https://i.ibb.co/cX2f3d5N/IMG-0051.jpg" alt="ไอดี 𝗭𝗲𝗻𝗹𝗲𝘀𝘀 - A002">
+        <img class="product-img" data-id="2" src="https://i.ibb.co/BHQFMyZx/IMG-0053.jpg" alt="">
         <div class="product-title">ไอดี Genshin Impact </div>
         <div class="tag">ยังไม่ผูกเมล</div> <div class="tag">สินค้าหมด</div>
         <div class="product-info">
@@ -183,6 +180,33 @@
       <a href="index.html">← กลับหน้าหลัก</a>
     </div>
   </div>
+
+  <!-- 🔥 สคริปต์สไลด์รูปภาพ -->
+  <script>
+    // กำหนดรูปภาพแต่ละการ์ด
+    const imageSets = {
+      1: [
+        "https://i.ibb.co/BHQFMyZx/IMG-0053.jpg",
+        "https://i.ibb.co/yV5bQkP/zzz1.jpg",
+        "https://i.ibb.co/zVxz6H6/zzz2.jpg"
+      ],
+      2: [
+        "https://i.ibb.co/BHQFMyZx/IMG-0053.jpg",
+        "https://i.ibb.co/yV5bQkP/zzz1.jpg",
+        "https://i.ibb.co/zVxz6H6/zzz2.jpg"
+      ]
+    };
+
+    document.querySelectorAll(".product-img").forEach(img => {
+      let id = img.getAttribute("data-id");
+      let i = 0;
+
+      setInterval(() => {
+        i = (i + 1) % imageSets[id].length;
+        img.src = imageSets[id][i];
+      }, 3000); // 3 วินาทีเปลี่ยนรูป
+    });
+  </script>
 
 </body>
 </html>
