@@ -96,7 +96,6 @@
       margin-bottom: 12px;
     }
 
-    /* ปุ่ม FB / LINE */
     .fb-button, .line-button {
       display: flex;
       align-items: center;
@@ -153,7 +152,7 @@
 
       <!-- ID 001 -->
       <div class="card">
-        <img class="product-img" src="https://i.ibb.co/BHQFMyZx/IMG-0053.jpg" alt="ไอดี 𝗭𝗲𝗻𝗹𝗲𝘀𝘀 - A001">
+        <img class="product-img" data-id="1" src="https://i.ibb.co/BHQFMyZx/IMG-0053.jpg" alt="">
         <div class="product-title">ไอดีเกม Genshin Impact </div>
         <div class="tag">ยังไม่ผูกเมล</div> <div class="tag">สินค้าหมด</div>
         <div class="product-info">
@@ -165,7 +164,7 @@
 
       <!-- ID 002 -->
       <div class="card">
-        <img class="product-img" src="https://i.ibb.co/BHQFMyZx/IMG-0053.jpg" alt="ไอดี 𝗭𝗲𝗻𝗹𝗲𝘀𝘀 - A002">
+        <img class="product-img" data-id="2" src="https://i.ibb.co/BHQFMyZx/IMG-0053.jpg" alt="">
         <div class="product-title">ไอดี Genshin Impact </div>
         <div class="tag">ยังไม่ผูกเมล</div> <div class="tag">สินค้าหมด</div>
         <div class="product-info">
@@ -181,6 +180,33 @@
       <a href="index.html">← กลับหน้าหลัก</a>
     </div>
   </div>
+
+  <!-- 🔥 สคริปต์สไลด์รูปภาพ -->
+  <script>
+    // กำหนดรูปภาพแต่ละการ์ด
+    const imageSets = {
+      1: [
+        "https://i.ibb.co/BHQFMyZx/IMG-0053.jpg",
+        "https://i.ibb.co/yV5bQkP/zzz1.jpg",
+        "https://i.ibb.co/zVxz6H6/zzz2.jpg"
+      ],
+      2: [
+        "https://i.ibb.co/BHQFMyZx/IMG-0053.jpg",
+        "https://i.ibb.co/yV5bQkP/zzz1.jpg",
+        "https://i.ibb.co/zVxz6H6/zzz2.jpg"
+      ]
+    };
+
+    document.querySelectorAll(".product-img").forEach(img => {
+      let id = img.getAttribute("data-id");
+      let i = 0;
+
+      setInterval(() => {
+        i = (i + 1) % imageSets[id].length;
+        img.src = imageSets[id][i];
+      }, 3000); // 3 วินาทีเปลี่ยนรูป
+    });
+  </script>
 
 </body>
 </html>
