@@ -155,7 +155,7 @@
 
       <!-- ID 001 -->
       <div class="card">
-        <img class="product-img" src="https://i.ibb.co/S2WNyZP/IMG-0403.jpg" alt="ไอดี 𝗭𝗲𝗻𝗹𝗲𝘀𝘀 - A001">
+        <img class="product-img" data-id="1" src="https://i.ibb.co/S2WNyZP/IMG-0403.jpg">
         <div class="product-title">ไอดีเกม Arknights </div>
         <div class="tag">ยังไม่ผูกเมล</div> <div class="tag"> สินค้าหมด </div>
         <div class="product-info">
@@ -167,7 +167,7 @@
 
       <!-- ID 002 -->
       <div class="card">
-        <img class="product-img" src="https://i.ibb.co/S2WNyZP/IMG-0403.jpg" alt="ไอดี 𝗭𝗲𝗻𝗹𝗲𝘀𝘀 - A002">
+        <img class="product-img" data-id="2" src="https://i.ibb.co/S2WNyZP/IMG-0403.jpg">
         <div class="product-title">ไอดีเกม Arknights </div>
         <div class="tag">ยังไม่ผูกเมล</div> <div class="tag"> สินค้าหมด </div>
         <div class="product-info">
@@ -183,6 +183,32 @@
       <a href="index.html">← กลับหน้าหลัก</a>
     </div>
   </div>
+
+  <!-- 🔥 ระบบสไลด์รูปภาพ -->
+  <script>
+    const imageSets = {
+      1: [
+        "https://i.ibb.co/S2WNyZP/IMG-0403.jpg",
+        "https://i.ibb.co/5T0JYHs/ark1.jpg",
+        "https://i.ibb.co/513q0my/ark2.jpg"
+      ],
+      2: [
+        "https://i.ibb.co/S2WNyZP/IMG-0403.jpg",
+        "https://i.ibb.co/5T0JYHs/ark1.jpg",
+        "https://i.ibb.co/513q0my/ark2.jpg"
+      ]
+    };
+
+    document.querySelectorAll(".product-img").forEach(img => {
+      let id = img.getAttribute("data-id");
+      let i = 0;
+
+      setInterval(() => {
+        i = (i + 1) % imageSets[id].length;
+        img.src = imageSets[id][i];
+      }, 3000); 
+    });
+  </script>
 
 </body>
 </html>
