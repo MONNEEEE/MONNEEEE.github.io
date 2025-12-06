@@ -96,8 +96,7 @@
       margin-bottom: 12px;
     }
 
-    /* ปุ่ม FB / LINE */
-    .fb-button, .line-button {
+    .fb-button {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -109,20 +108,10 @@
       text-decoration: none;
       margin-top: 8px;
       font-size: 14px;
-    }
-
-    .fb-button {
       background-color: #1877f2;
     }
     .fb-button:hover {
       background-color: #145bd1;
-    }
-
-    .line-button {
-      background-color: #00b900;
-    }
-    .line-button:hover {
-      background-color: #009400;
     }
 
     .back-link {
@@ -145,7 +134,7 @@
 <body>
 
   <div class="header">
-    <h1> 𝗢𝗨𝗧𝗘𝗥𝗣𝗟𝗔𝗡𝗘 </h1>
+    <h1>𝗢𝗨𝗧𝗘𝗥𝗣𝗟𝗔𝗡𝗘</h1>
   </div>
 
   <div class="container">
@@ -153,9 +142,10 @@
 
       <!-- ID 001 -->
       <div class="card">
-        <img class="product-img" src="https://i.ibb.co/qL6z0YNS/IMG-0394.jpg" alt="ไอดี 𝗭𝗲𝗻𝗹𝗲𝘀𝘀 - A001">
-        <div class="product-title">ไอดี OUTERPLANE </div>
-        <div class="tag">ยังไม่ผูกเมล</div> <div class="tag">สินค้าหมด</div>
+        <img class="product-img" data-id="1" src="https://i.ibb.co/qL6z0YNS/IMG-0394.jpg">
+        <div class="product-title">ไอดี OUTERPLANE</div>
+        <div class="tag">ยังไม่ผูกเมล</div>
+        <div class="tag">สินค้าหมด</div>
         <div class="product-info">
           - ตัวละครเริ่มต้น<br>
           - ราคาพิเศษ: <strong> -- บาท</strong>
@@ -165,9 +155,10 @@
 
       <!-- ID 002 -->
       <div class="card">
-        <img class="product-img" src="https://i.ibb.co/qL6z0YNS/IMG-0394.jpg" alt="ไอดี 𝗭𝗲𝗻𝗹𝗲𝘀𝘀 - A002">
-        <div class="product-title">ไอดี OUTERPLANE </div>
-        <div class="tag">ยังไม่ผูกเมล</div> <div class="tag">สินค้าหมด</div>
+        <img class="product-img" data-id="2" src="https://i.ibb.co/qL6z0YNS/IMG-0394.jpg">
+        <div class="product-title">ไอดี OUTERPLANE</div>
+        <div class="tag">ยังไม่ผูกเมล</div>
+        <div class="tag">สินค้าหมด</div>
         <div class="product-info">
           - ตัวละครเริ่มต้น<br>
           - ราคาพิเศษ: <strong> -- บาท</strong>
@@ -181,6 +172,32 @@
       <a href="index.html">← กลับหน้าหลัก</a>
     </div>
   </div>
-  
+
+  <!-- 🔥 สคริปต์เปลี่ยนรูปสินค้าแบบเดียวกับ Zenless -->
+  <script>
+    const imageSets = {
+      1: [
+        "https://i.ibb.co/qL6z0YNS/IMG-0394.jpg",
+        "https://i.ibb.co/0XWBRG2/outer1.jpg",
+        "https://i.ibb.co/p3H6mwH/outer2.jpg"
+      ],
+      2: [
+        "https://i.ibb.co/qL6z0YNS/IMG-0394.jpg",
+        "https://i.ibb.co/0XWBRG2/outer1.jpg",
+        "https://i.ibb.co/p3H6mwH/outer2.jpg"
+      ]
+    };
+
+    document.querySelectorAll(".product-img").forEach(img => {
+      let id = img.getAttribute("data-id");
+      let i = 0;
+
+      setInterval(() => {
+        i = (i + 1) % imageSets[id].length;
+        img.src = imageSets[id][i];
+      }, 3000);
+    });
+  </script>
+
 </body>
 </html>
