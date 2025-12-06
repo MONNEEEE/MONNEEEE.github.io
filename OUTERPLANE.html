@@ -181,6 +181,32 @@
       <a href="index.html">← กลับหน้าหลัก</a>
     </div>
   </div>
+  
+<!-- 🔥 ระบบสไลด์รูปภาพ -->
+  <script>
+    const imageSets = {
+      1: [
+        "https://i.ibb.co/S2WNyZP/IMG-0403.jpg",
+        "https://i.ibb.co/5T0JYHs/ark1.jpg",
+        "https://i.ibb.co/513q0my/ark2.jpg"
+      ],
+      2: [
+        "https://i.ibb.co/S2WNyZP/IMG-0403.jpg",
+        "https://i.ibb.co/5T0JYHs/ark1.jpg",
+        "https://i.ibb.co/513q0my/ark2.jpg"
+      ]
+    };
+
+    document.querySelectorAll(".product-img").forEach(img => {
+      let id = img.getAttribute("data-id");
+      let i = 0;
+
+      setInterval(() => {
+        i = (i + 1) % imageSets[id].length;
+        img.src = imageSets[id][i];
+      }, 3000); 
+    });
+  </script>
 
 </body>
 </html>
