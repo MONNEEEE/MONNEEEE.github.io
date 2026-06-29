@@ -1,385 +1,1018 @@
 <!DOCTYPE html>
 <html lang="th">
 
-<!--【01】 Head (เฮด) | ส่วนหัวของเว็บไซต์-->
+<!--【01】Head (เฮด) | ส่วนหัวของเว็บไซต์-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hoshine | เว็บไซต์ดูอนิเมะ</title>
-
-    <!-- โหลดไฟล์ CSS -->
+    <meta name="description" content="Hoshine เว็บไซต์ดูอนิเมะออนไลน์">
+    <meta name="keywords" content="Anime,Hoshine,ดูอนิเมะ">
+    <meta name="author" content="Hoshine">
+    <title>Hoshine | เว็บไซต์ดูอนิเมะออนไลน์</title>
     <link rel="stylesheet" href="css/style.css">
-
-    <!-- โหลดฟอนต์ Kanit -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- โหลดไอคอน Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
-<!--【02】 Body (บอดี้) | เนื้อหาทั้งหมดของเว็บไซต์-->
+<!--【02】Body (บอดี้) | เนื้อหาทั้งหมด-->
 <body>
 
-    <!--【03】 พื้นหลังเว็บไซต์-->
-    <div class="background-glow"></div>
+<!--【03】Loading (โหลดดิ้ง) | หน้าโหลดเว็บไซต์-->
+<div class="loading-screen">
+    <div class="loading-logo"><h1>Hoshi<span>ne</span></h1></div>
+    <div class="loading-circle"></div>
+    <p>กำลังโหลด...</p>
+</div>
 
-    <!--【04】 Dashboard (แดชบอร์ด) | โครงสร้างหลักของเว็บไซต์-->
-    <div class="dashboard">
+<!--【04】Background (แบ็กกราวด์) | พื้นหลังเว็บไซต์-->
+<div class="background">
+    <div class="bg-gradient"></div>
+    <div class="bg-grid"></div>
+    <div class="bg-blur bg-1"></div>
+    <div class="bg-blur bg-2"></div>
+</div>
 
-        <!--【05】 Sidebar (ไซด์บาร์) | เมนูด้านซ้าย-->
-        <aside class="sidebar">
+<!--【05】Wrapper (แรปเปอร์) | กล่องหลัก-->
+<div class="wrapper">
 
-            <!-- โลโก้ -->
-            <div class="logo"><h1><span>Hoshi</span>ne</h1></div>
+<!--【06】Sidebar (ไซด์บาร์) | เมนูด้านซ้าย-->
+<aside class="sidebar">
 
-            <!-- เมนูหลัก -->
-            <nav class="menu">
-                <a href="#" class="active"><i class="fa-solid fa-house"></i><span>หน้าหลัก</span></a>
-                <a href="#"><i class="fa-solid fa-compass"></i><span>ค้นหา</span></a>
-                <a href="#"><i class="fa-solid fa-fire"></i><span>กำลังมาแรง</span></a>
-                <a href="#"><i class="fa-solid fa-heart"></i><span>รายการโปรด</span></a>
-                <a href="#"><i class="fa-solid fa-clock-rotate-left"></i><span>ดูต่อ</span></a>
-                <a href="#"><i class="fa-solid fa-film"></i><span>อนิเมะทั้งหมด</span></a>
-                <a href="#"><i class="fa-solid fa-calendar"></i><span>ตารางฉาย</span></a>
-                <a href="#"><i class="fa-solid fa-user"></i><span>โปรไฟล์</span></a>
-                <a href="#"><i class="fa-solid fa-gear"></i><span>ตั้งค่า</span></a>
-            </nav>
+<div class="logo"><h1>Hoshi<span>ne</span></h1></div>
 
-        </aside>
+<nav class="menu">
+    <a href="#" class="active"><i class="fa-solid fa-house"></i><span>หน้าหลัก</span></a>
+    <a href="#"><i class="fa-solid fa-compass"></i><span>สำรวจ</span></a>
+    <a href="#"><i class="fa-solid fa-fire"></i><span>กำลังมาแรง</span></a>
+    <a href="#"><i class="fa-solid fa-calendar-days"></i><span>ตารางฉาย</span></a>
+    <a href="#"><i class="fa-solid fa-clapperboard"></i><span>อนิเมะทั้งหมด</span></a>
+</nav>
 
-        <!--【06】 Main Content (เมนคอนเทนต์) | พื้นที่แสดงเนื้อหาหลัก-->
-        <main class="main-content">
+<div class="sidebar-title">คลังของฉัน</div>
 
-            <!--【07】 Header (เฮดเดอร์) | แถบด้านบน-->
-            <header class="header">
+<nav class="menu">
+    <a href="#"><i class="fa-solid fa-clock-rotate-left"></i><span>ดูต่อ</span></a>
+    <a href="#"><i class="fa-solid fa-heart"></i><span>รายการโปรด</span></a>
+    <a href="#"><i class="fa-solid fa-bookmark"></i><span>บุ๊กมาร์ก</span></a>
+    <a href="#"><i class="fa-solid fa-download"></i><span>ดาวน์โหลด</span></a>
+    <a href="#"><i class="fa-solid fa-history"></i><span>ประวัติการรับชม</span></a>
+</nav>
 
-                <!-- ช่องค้นหา -->
-                <div class="search-box">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" placeholder="ค้นหาอนิเมะ...">
-                </div>
+<div class="sidebar-title">ระบบ</div>
 
-                <!-- เมนูด้านขวา -->
-                <div class="header-action">
-                    <button class="icon-btn"><i class="fa-solid fa-bell"></i></button>
-                    <button class="icon-btn"><i class="fa-solid fa-bookmark"></i></button>
+<nav class="menu">
+    <a href="#"><i class="fa-solid fa-user"></i><span>โปรไฟล์</span></a>
+    <a href="#"><i class="fa-solid fa-bell"></i><span>การแจ้งเตือน</span></a>
+    <a href="#"><i class="fa-solid fa-gear"></i><span>ตั้งค่า</span></a>
+</nav>
 
-                    <div class="profile">
-                        <img src="img/avatar.jpg" alt="โปรไฟล์">
-                        <span>Guest</span>
-                    </div>
-                </div>
+</aside>
 
-            </header>
+<!--【07】Main (เมน) | เนื้อหาหลัก-->
+<main class="main">
 
-            <!--【08】 Hero Banner (ฮีโร่แบนเนอร์) | แบนเนอร์หลักของหน้าเว็บ-->
-<section class="hero-banner">
+<!--【08】Header (เฮดเดอร์) | แถบด้านบน-->
+<header class="header">
 
-    <div class="hero-background">
-        <img src="img/banner/solo-leveling.jpg" alt="Solo Leveling">
-    </div>
+<div class="search-box">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input type="text" placeholder="ค้นหาอนิเมะ...">
+</div>
 
-    <div class="hero-overlay"></div>
+<div class="header-right">
+    <button class="header-btn"><i class="fa-solid fa-moon"></i></button>
+    <button class="header-btn"><i class="fa-solid fa-bell"></i></button>
+    <button class="header-btn"><i class="fa-solid fa-bookmark"></i></button>
 
-    <div class="hero-content">
-
-        <span class="hero-badge">🔥 อนิเมะแนะนำ</span>
-
-        <h1>Solo Leveling</h1>
-
-        <div class="hero-meta">
-            <span><i class="fa-solid fa-star"></i> 9.8</span>
-            <span>TV</span>
-            <span>13 ตอน</span>
-            <span>2024</span>
-            <span>Action</span>
-            <span>Fantasy</span>
+    <div class="profile">
+        <img src="img/avatar/default.png" alt="Profile">
+        <div>
+            <h4>Guest</h4>
+            <span>ยังไม่ได้เข้าสู่ระบบ</span>
         </div>
-
-        <p>
-            ซองจินอู ฮันเตอร์แรงค์ E ผู้ที่อ่อนแอที่สุด
-            หลังผ่านเหตุการณ์ในดันเจียนลับ เขาได้รับระบบปริศนา
-            ที่ทำให้แข็งแกร่งขึ้นเพียงคนเดียว
-            และเริ่มต้นการเป็นฮันเตอร์ที่แข็งแกร่งที่สุด
-        </p>
-
-        <div class="hero-buttons">
-            <button class="watch-btn"><i class="fa-solid fa-play"></i> รับชมตอนแรก</button>
-            <button class="favorite-btn"><i class="fa-solid fa-plus"></i> เพิ่มรายการ</button>
-        </div>
-
     </div>
+</div>
 
-    <div class="hero-card">
+</header>
 
-        <span class="episode-title">ตอนล่าสุด</span>
+<!--【09】Hero Slider (ฮีโร่สไลเดอร์) | แบนเนอร์หลัก-->
+<section class="hero-slider" id="heroSlider">
 
-        <h2>Episode 13</h2>
+<div class="hero-slide active">
 
-        <p>Arise</p>
+<img src="img/banner/solo-leveling.jpg" alt="Solo Leveling" class="hero-image">
 
-        <button>รับชม</button>
+<div class="hero-overlay"></div>
 
-    </div>
+<div class="hero-content">
+
+<div class="hero-badge">NEW EPISODE</div>
+
+<h1 class="hero-title">Solo Leveling</h1>
+
+<div class="hero-info">
+<span><i class="fa-solid fa-star"></i>9.8</span>
+<span>2024</span>
+<span>TV</span>
+<span>13 ตอน</span>
+<span>Action</span>
+<span>Fantasy</span>
+</div>
+
+<p class="hero-description">
+ซองจินอู ฮันเตอร์แรงค์ E ผู้ที่อ่อนแอที่สุด ได้รับพลังลึกลับจากระบบปริศนา ทำให้เขาสามารถพัฒนาตัวเองได้ไม่สิ้นสุด และก้าวสู่การเป็นฮันเตอร์ที่แข็งแกร่งที่สุด
+</p>
+
+<div class="hero-buttons">
+<button class="watch-btn"><i class="fa-solid fa-play"></i>รับชมตอนแรก</button>
+<button class="favorite-btn"><i class="fa-solid fa-plus"></i>เพิ่มรายการ</button>
+<button class="info-btn"><i class="fa-solid fa-circle-info"></i>รายละเอียด</button>
+</div>
+
+</div>
+
+</div>
+
+<div class="hero-slide">
+
+<img src="img/banner/dandadan.jpg" alt="Dandadan" class="hero-image">
+
+<div class="hero-overlay"></div>
+
+<div class="hero-content">
+
+<div class="hero-badge">TRENDING</div>
+
+<h1 class="hero-title">Dandadan</h1>
+
+<div class="hero-info">
+<span><i class="fa-solid fa-star"></i>9.6</span>
+<span>2024</span>
+<span>TV</span>
+<span>12 ตอน</span>
+<span>Action</span>
+<span>Comedy</span>
+</div>
+
+<p class="hero-description">
+เรื่องราวสุดวุ่นของโมโมะและโอคารุน ที่ต้องเผชิญทั้งภูตผี วิญญาณ และเอเลี่ยน ในการผจญภัยสุดเหนือธรรมชาติ
+</p>
+
+<div class="hero-buttons">
+<button class="watch-btn"><i class="fa-solid fa-play"></i>รับชมตอนแรก</button>
+<button class="favorite-btn"><i class="fa-solid fa-plus"></i>เพิ่มรายการ</button>
+<button class="info-btn"><i class="fa-solid fa-circle-info"></i>รายละเอียด</button>
+</div>
+
+</div>
+
+</div>
+
+<div class="hero-navigation">
+<button class="hero-prev"><i class="fa-solid fa-chevron-left"></i></button>
+
+<div class="hero-dots">
+<span class="dot active"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+</div>
+
+<button class="hero-next"><i class="fa-solid fa-chevron-right"></i></button>
+</div>
 
 </section>
 
-<!--【09】 Continue Watching (คอนทินิววอชชิง) | ดูต่อ-->
-<section class="continue-section">
+<!--【10】Continue Watching (คอนทินิววอชชิง) | ดูต่อ-->
+<section class="continue-section" id="continueWatching">
 
-    <div class="section-title">
-        <h2>ดูต่อ</h2>
-        <a href="#">ดูทั้งหมด</a>
-    </div>
+<div class="section-header">
+<h2>ดูต่อ</h2>
+<a href="#">ดูทั้งหมด</a>
+</div>
 
-    <div class="continue-list">
+<div class="continue-slider">
+<div class="continue-card">
+<img src="img/anime/solo-leveling.jpg" alt="Solo Leveling">
+<div class="continue-overlay">
+<button class="play-btn"><i class="fa-solid fa-play"></i></button>
+</div>
+<div class="continue-info">
+<h3>Solo Leveling</h3>
+<p>ตอนที่ 8 : This Is Frustrating</p>
+<div class="progress"><div class="progress-bar" style="width:72%;"></div></div>
+<span>18:42 / 25:30</span>
+</div>
+</div>
 
-        <!-- การ์ดอนิเมะใบที่ 1 -->
-        <div class="continue-card">
+<div class="continue-card">
+<img src="img/anime/dandadan.jpg" alt="Dandadan">
+<div class="continue-overlay">
+<button class="play-btn"><i class="fa-solid fa-play"></i></button>
+</div>
+<div class="continue-info">
+<h3>Dandadan</h3>
+<p>ตอนที่ 10 : Turbo Granny</p>
+<div class="progress"><div class="progress-bar" style="width:48%;"></div></div>
+<span>12:08 / 24:00</span>
+</div>
+</div>
 
-            <img src="img/anime/solo-leveling.jpg" alt="Solo Leveling">
+<div class="continue-card">
+<img src="img/anime/kaiju-no8.jpg" alt="Kaiju No.8">
+<div class="continue-overlay">
+<button class="play-btn"><i class="fa-solid fa-play"></i></button>
+</div>
+<div class="continue-info">
+<h3>Kaiju No.8</h3>
+<p>ตอนที่ 6 : Kaiju Weapon</p>
+<div class="progress"><div class="progress-bar" style="width:86%;"></div></div>
+<span>21:51 / 25:00</span>
+</div>
+</div>
 
-            <div class="continue-info">
+<div class="continue-card">
+<img src="img/anime/blue-lock.jpg" alt="Blue Lock">
+<div class="continue-overlay">
+<button class="play-btn"><i class="fa-solid fa-play"></i></button>
+</div>
+<div class="continue-info">
+<h3>Blue Lock</h3>
+<p>ตอนที่ 19 : Evolution</p>
+<div class="progress"><div class="progress-bar" style="width:34%;"></div></div>
+<span>08:44 / 24:00</span>
+</div>
+</div>
 
-                <h3>Solo Leveling</h3>
+<div class="continue-card">
+<img src="img/anime/sakamoto-days.jpg" alt="Sakamoto Days">
+<div class="continue-overlay">
+<button class="play-btn"><i class="fa-solid fa-play"></i></button>
+</div>
+<div class="continue-info">
+<h3>Sakamoto Days</h3>
+<p>ตอนที่ 4 : Assassin</p>
+<div class="progress"><div class="progress-bar" style="width:55%;"></div></div>
+<span>14:27 / 26:00</span>
+</div>
+</div>
 
-                <span>ตอนที่ 8</span>
+<div class="continue-card">
+<img src="img/anime/chainsaw-man.jpg" alt="Chainsaw Man">
+<div class="continue-overlay">
+<button class="play-btn"><i class="fa-solid fa-play"></i></button>
+</div>
+<div class="continue-info">
+<h3>Chainsaw Man</h3>
+<p>ตอนที่ 11 : Mission Start</p>
+<div class="progress"><div class="progress-bar" style="width:91%;"></div></div>
+<span>23:01 / 25:00</span>
+</div>
+</div>
 
-                <div class="progress">
-                    <div class="progress-bar" style="width:72%;"></div>
-                </div>
-
-                <small>ดูไปแล้ว 18:42 / 25:30</small>
-
-            </div>
-
-            <button><i class="fa-solid fa-play"></i></button>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!--【10】 Latest Anime (เลเทสต์ อนิเมะ) | อนิเมะอัปเดตล่าสุด-->
-<section class="latest-section">
-
-    <div class="section-title">
-        <h2>อัปเดตล่าสุด</h2>
-        <a href="#">ดูทั้งหมด</a>
-    </div>
-
-    <div class="anime-grid">
-
-        <!-- การ์ดอนิเมะ -->
-        <article class="anime-card">
-            <div class="anime-image">
-                <img src="img/anime/solo-leveling.jpg" alt="Solo Leveling">
-                <span class="episode">EP 13</span>
-                <span class="rating"><i class="fa-solid fa-star"></i>9.8</span>
-            </div>
-
-            <div class="anime-detail">
-                <h3>Solo Leveling</h3>
-
-                <div class="anime-tag">
-                    <span>Action</span>
-                    <span>Fantasy</span>
-                </div>
-
-                <div class="anime-bottom">
-                    <span>24 นาที</span>
-                    <button><i class="fa-solid fa-play"></i></button>
-                </div>
-            </div>
-        </article>
-
-        <!-- การ์ดอนิเมะ -->
-        <article class="anime-card">
-            <div class="anime-image">
-                <img src="img/anime/dandadan.jpg" alt="Dandadan">
-                <span class="episode">EP 12</span>
-                <span class="rating"><i class="fa-solid fa-star"></i>9.6</span>
-            </div>
-
-            <div class="anime-detail">
-                <h3>Dandadan</h3>
-
-                <div class="anime-tag">
-                    <span>Action</span>
-                    <span>Comedy</span>
-                </div>
-
-                <div class="anime-bottom">
-                    <span>24 นาที</span>
-                    <button><i class="fa-solid fa-play"></i></button>
-                </div>
-            </div>
-        </article>
-
-        <!-- การ์ดอนิเมะ -->
-        <article class="anime-card">
-            <div class="anime-image">
-                <img src="img/anime/kaiju-no8.jpg" alt="Kaiju No.8">
-                <span class="episode">EP 12</span>
-                <span class="rating"><i class="fa-solid fa-star"></i>9.5</span>
-            </div>
-
-            <div class="anime-detail">
-                <h3>Kaiju No.8</h3>
-
-                <div class="anime-tag">
-                    <span>Action</span>
-                    <span>Sci-Fi</span>
-                </div>
-
-                <div class="anime-bottom">
-                    <span>24 นาที</span>
-                    <button><i class="fa-solid fa-play"></i></button>
-                </div>
-            </div>
-        </article>
-
-        <!-- การ์ดอนิเมะ -->
-        <article class="anime-card">
-            <div class="anime-image">
-                <img src="img/anime/blue-lock.jpg" alt="Blue Lock">
-                <span class="episode">EP 24</span>
-                <span class="rating"><i class="fa-solid fa-star"></i>9.4</span>
-            </div>
-
-            <div class="anime-detail">
-                <h3>Blue Lock</h3>
-
-                <div class="anime-tag">
-                    <span>Sport</span>
-                    <span>Drama</span>
-                </div>
-
-                <div class="anime-bottom">
-                    <span>24 นาที</span>
-                    <button><i class="fa-solid fa-play"></i></button>
-                </div>
-            </div>
-        </article>
-
-    </div>
+</div>
 
 </section>
 
-<!--【11】 Popular Anime (ป๊อปปูลาร์ อนิเมะ) | อนิเมะยอดนิยม-->
-<section class="popular-section">
+<!--【11】Trending (เทรนดิง) | อนิเมะกำลังมาแรง-->
+<section class="trending-section" id="trending">
 
-    <div class="section-title">
-        <h2>อนิเมะยอดนิยม</h2>
-        <a href="#">ดูทั้งหมด</a>
-    </div>
+<div class="section-header">
+<h2>🔥 กำลังมาแรง</h2>
+<a href="#">ดูทั้งหมด</a>
+</div>
 
-    <div class="popular-grid">
+<div class="trending-grid">
 
-        <!-- อันดับ 1 -->
-        <article class="popular-card">
-            <span class="rank">01</span>
+<article class="anime-card">
+<div class="anime-poster">
+<img src="img/anime/solo-leveling.jpg" alt="Solo Leveling">
+<span class="episode-badge">EP 13</span>
+<span class="rating-badge"><i class="fa-solid fa-star"></i>9.8</span>
+</div>
+<div class="anime-content">
+<h3>Solo Leveling</h3>
+<p>ฮันเตอร์ผู้แข็งแกร่งที่สุด</p>
+<div class="anime-tags">
+<span>Action</span>
+<span>Fantasy</span>
+</div>
+<button class="watch-card-btn"><i class="fa-solid fa-play"></i>รับชม</button>
+</div>
+</article>
 
-            <div class="popular-image">
-                <img src="img/anime/solo-leveling.jpg" alt="Solo Leveling">
-            </div>
+<article class="anime-card">
+<div class="anime-poster">
+<img src="img/anime/dandadan.jpg" alt="Dandadan">
+<span class="episode-badge">EP 12</span>
+<span class="rating-badge"><i class="fa-solid fa-star"></i>9.6</span>
+</div>
+<div class="anime-content">
+<h3>Dandadan</h3>
+<p>เหนือธรรมชาติสุดปั่น</p>
+<div class="anime-tags">
+<span>Comedy</span>
+<span>Action</span>
+</div>
+<button class="watch-card-btn"><i class="fa-solid fa-play"></i>รับชม</button>
+</div>
+</article>
 
-            <div class="popular-info">
-                <h3>Solo Leveling</h3>
+<article class="anime-card">
+<div class="anime-poster">
+<img src="img/anime/kaiju-no8.jpg" alt="Kaiju No.8">
+<span class="episode-badge">EP 12</span>
+<span class="rating-badge"><i class="fa-solid fa-star"></i>9.5</span>
+</div>
+<div class="anime-content">
+<h3>Kaiju No.8</h3>
+<p>มนุษย์ผู้กลายเป็นไคจู</p>
+<div class="anime-tags">
+<span>Action</span>
+<span>Sci-Fi</span>
+</div>
+<button class="watch-card-btn"><i class="fa-solid fa-play"></i>รับชม</button>
+</div>
+</article>
 
-                <div class="popular-meta">
-                    <span><i class="fa-solid fa-star"></i> 9.8</span>
-                    <span>13 ตอน</span>
-                </div>
+<article class="anime-card">
+<div class="anime-poster">
+<img src="img/anime/sakamoto-days.jpg" alt="Sakamoto Days">
+<span class="episode-badge">EP 10</span>
+<span class="rating-badge"><i class="fa-solid fa-star"></i>9.3</span>
+</div>
+<div class="anime-content">
+<h3>Sakamoto Days</h3>
+<p>นักฆ่าในตำนาน</p>
+<div class="anime-tags">
+<span>Action</span>
+<span>Comedy</span>
+</div>
+<button class="watch-card-btn"><i class="fa-solid fa-play"></i>รับชม</button>
+</div>
+</article>
 
-                <button><i class="fa-solid fa-play"></i> รับชม</button>
-            </div>
-        </article>
-
-        <!-- อันดับ 2 -->
-        <article class="popular-card">
-            <span class="rank">02</span>
-
-            <div class="popular-image">
-                <img src="img/anime/dandadan.jpg" alt="Dandadan">
-            </div>
-
-            <div class="popular-info">
-                <h3>Dandadan</h3>
-
-                <div class="popular-meta">
-                    <span><i class="fa-solid fa-star"></i> 9.6</span>
-                    <span>12 ตอน</span>
-                </div>
-
-                <button><i class="fa-solid fa-play"></i> รับชม</button>
-            </div>
-        </article>
-
-        <!-- อันดับ 3 -->
-        <article class="popular-card">
-            <span class="rank">03</span>
-
-            <div class="popular-image">
-                <img src="img/anime/kaiju-no8.jpg" alt="Kaiju No.8">
-            </div>
-
-            <div class="popular-info">
-                <h3>Kaiju No.8</h3>
-
-                <div class="popular-meta">
-                    <span><i class="fa-solid fa-star"></i> 9.5</span>
-                    <span>12 ตอน</span>
-                </div>
-
-                <button><i class="fa-solid fa-play"></i> รับชม</button>
-            </div>
-        </article>
-
-        <!-- อันดับ 4 -->
-        <article class="popular-card">
-            <span class="rank">04</span>
-
-            <div class="popular-image">
-                <img src="img/anime/blue-lock.jpg" alt="Blue Lock">
-            </div>
-
-            <div class="popular-info">
-                <h3>Blue Lock</h3>
-
-                <div class="popular-meta">
-                    <span><i class="fa-solid fa-star"></i> 9.4</span>
-                    <span>24 ตอน</span>
-                </div>
-
-                <button><i class="fa-solid fa-play"></i> รับชม</button>
-            </div>
-        </article>
-
-    </div>
+</div>
 
 </section>
 
-<!--【12】 Footer (ฟุตเตอร์) | ส่วนท้ายของเว็บไซต์-->
+<!--【12】Latest Update (เลเทสต์อัปเดต) | อัปเดตอนิเมะล่าสุด-->
+<section class="latest-section" id="latest">
+
+<div class="section-header">
+<h2>อัปเดตล่าสุด</h2>
+<a href="#">ดูทั้งหมด</a>
+</div>
+
+<div class="latest-grid">
+
+<article class="anime-card">
+<div class="anime-poster">
+<img src="img/anime/chainsaw-man.jpg" alt="Chainsaw Man">
+<span class="episode-badge">EP 12</span>
+<span class="rating-badge"><i class="fa-solid fa-star"></i>9.4</span>
+</div>
+<div class="anime-content">
+<h3>Chainsaw Man</h3>
+<p>ปีศาจเลื่อยยนต์</p>
+<div class="anime-tags"><span>Action</span><span>Dark Fantasy</span></div>
+<button class="watch-card-btn"><i class="fa-solid fa-play"></i>รับชม</button>
+</div>
+</article>
+
+<article class="anime-card">
+<div class="anime-poster">
+<img src="img/anime/wind-breaker.jpg" alt="Wind Breaker">
+<span class="episode-badge">EP 13</span>
+<span class="rating-badge"><i class="fa-solid fa-star"></i>9.1</span>
+</div>
+<div class="anime-content">
+<h3>Wind Breaker</h3>
+<p>นักเลงโรงเรียน</p>
+<div class="anime-tags"><span>Action</span><span>School</span></div>
+<button class="watch-card-btn"><i class="fa-solid fa-play"></i>รับชม</button>
+</div>
+</article>
+
+<article class="anime-card">
+<div class="anime-poster">
+<img src="img/anime/blue-lock.jpg" alt="Blue Lock">
+<span class="episode-badge">EP 24</span>
+<span class="rating-badge"><i class="fa-solid fa-star"></i>9.2</span>
+</div>
+<div class="anime-content">
+<h3>Blue Lock</h3>
+<p>ฟุตบอลเอาตัวรอด</p>
+<div class="anime-tags"><span>Sport</span><span>Drama</span></div>
+<button class="watch-card-btn"><i class="fa-solid fa-play"></i>รับชม</button>
+</div>
+</article>
+
+<article class="anime-card">
+<div class="anime-poster">
+<img src="img/anime/jujutsu-kaisen.jpg" alt="Jujutsu Kaisen">
+<span class="episode-badge">EP 23</span>
+<span class="rating-badge"><i class="fa-solid fa-star"></i>9.7</span>
+</div>
+<div class="anime-content">
+<h3>Jujutsu Kaisen</h3>
+<p>มหาเวทย์ผนึกมาร</p>
+<div class="anime-tags"><span>Action</span><span>Supernatural</span></div>
+<button class="watch-card-btn"><i class="fa-solid fa-play"></i>รับชม</button>
+</div>
+</article>
+
+<article class="anime-card">
+<div class="anime-poster">
+<img src="img/anime/spy-family.jpg" alt="Spy x Family">
+<span class="episode-badge">EP 25</span>
+<span class="rating-badge"><i class="fa-solid fa-star"></i>9.0</span>
+</div>
+<div class="anime-content">
+<h3>Spy × Family</h3>
+<p>ครอบครัวสายลับ</p>
+<div class="anime-tags"><span>Comedy</span><span>Action</span></div>
+<button class="watch-card-btn"><i class="fa-solid fa-play"></i>รับชม</button>
+</div>
+</article>
+
+<article class="anime-card">
+<div class="anime-poster">
+<img src="img/anime/frieren.jpg" alt="Frieren">
+<span class="episode-badge">EP 28</span>
+<span class="rating-badge"><i class="fa-solid fa-star"></i>9.9</span>
+</div>
+<div class="anime-content">
+<h3>Frieren</h3>
+<p>คำอธิษฐานในวันที่จากลา</p>
+<div class="anime-tags"><span>Fantasy</span><span>Adventure</span></div>
+<button class="watch-card-btn"><i class="fa-solid fa-play"></i>รับชม</button>
+</div>
+</article>
+
+<article class="anime-card">
+<div class="anime-poster">
+<img src="img/anime/one-piece.jpg" alt="One Piece">
+<span class="episode-badge">EP 1135</span>
+<span class="rating-badge"><i class="fa-solid fa-star"></i>9.8</span>
+</div>
+<div class="anime-content">
+<h3>One Piece</h3>
+<p>ราชาโจรสลัด</p>
+<div class="anime-tags"><span>Adventure</span><span>Action</span></div>
+<button class="watch-card-btn"><i class="fa-solid fa-play"></i>รับชม</button>
+</div>
+</article>
+
+<article class="anime-card">
+<div class="anime-poster">
+<img src="img/anime/naruto.jpg" alt="Naruto">
+<span class="episode-badge">720 EP</span>
+<span class="rating-badge"><i class="fa-solid fa-star"></i>9.6</span>
+</div>
+<div class="anime-content">
+<h3>Naruto</h3>
+<p>นินจาจอมคาถา</p>
+<div class="anime-tags"><span>Action</span><span>Ninja</span></div>
+<button class="watch-card-btn"><i class="fa-solid fa-play"></i>รับชม</button>
+</div>
+</article>
+<article class="top-card">
+<div class="top-rank">07</div>
+<div class="top-poster">
+<img src="img/anime/chainsaw-man.jpg" alt="Chainsaw Man">
+</div>
+<div class="top-info">
+<h3>Chainsaw Man</h3>
+<p>Action • Dark Fantasy</p>
+<div class="top-meta">
+<span><i class="fa-solid fa-star"></i>9.4</span>
+<span>12 ตอน</span>
+</div>
+</div>
+<button class="top-play"><i class="fa-solid fa-play"></i></button>
+</article>
+
+<article class="top-card">
+<div class="top-rank">08</div>
+<div class="top-poster">
+<img src="img/anime/attack-on-titan.jpg" alt="Attack on Titan">
+</div>
+<div class="top-info">
+<h3>Attack on Titan</h3>
+<p>Action • Drama</p>
+<div class="top-meta">
+<span><i class="fa-solid fa-star"></i>9.8</span>
+<span>94 ตอน</span>
+</div>
+</div>
+<button class="top-play"><i class="fa-solid fa-play"></i></button>
+</article>
+
+<article class="top-card">
+<div class="top-rank">09</div>
+<div class="top-poster">
+<img src="img/anime/bleach.jpg" alt="Bleach">
+</div>
+<div class="top-info">
+<h3>Bleach TYBW</h3>
+<p>Action • Supernatural</p>
+<div class="top-meta">
+<span><i class="fa-solid fa-star"></i>9.5</span>
+<span>40+ ตอน</span>
+</div>
+</div>
+<button class="top-play"><i class="fa-solid fa-play"></i></button>
+</article>
+
+<article class="top-card">
+<div class="top-rank">10</div>
+<div class="top-poster">
+<img src="img/anime/re-zero.jpg" alt="Re Zero">
+</div>
+<div class="top-info">
+<h3>Re:Zero</h3>
+<p>Fantasy • Drama</p>
+<div class="top-meta">
+<span><i class="fa-solid fa-star"></i>9.2</span>
+<span>50+ ตอน</span>
+</div>
+</div>
+<button class="top-play"><i class="fa-solid fa-play"></i></button>
+</article>
+
+</div>
+
+</section>
+
+<!--【14】Genres (เจนร์) | หมวดหมู่อนิเมะ-->
+<section class="genres-section" id="genres">
+
+<div class="section-header">
+<h2>หมวดหมู่</h2>
+<a href="#">ดูทั้งหมด</a>
+</div>
+
+<div class="genre-grid">
+
+<a href="#" class="genre-card action">
+<i class="fa-solid fa-burst"></i>
+<h3>Action</h3>
+<p>245 เรื่อง</p>
+</a>
+
+<a href="#" class="genre-card adventure">
+<i class="fa-solid fa-map"></i>
+<h3>Adventure</h3>
+<p>188 เรื่อง</p>
+</a>
+
+<a href="#" class="genre-card fantasy">
+<i class="fa-solid fa-dragon"></i>
+<h3>Fantasy</h3>
+<p>162 เรื่อง</p>
+</a>
+
+<a href="#" class="genre-card comedy">
+<i class="fa-solid fa-face-laugh"></i>
+<h3>Comedy</h3>
+<p>214 เรื่อง</p>
+</a>
+
+<a href="#" class="genre-card romance">
+<i class="fa-solid fa-heart"></i>
+<h3>Romance</h3>
+<p>174 เรื่อง</p>
+</a>
+
+<a href="#" class="genre-card horror">
+<i class="fa-solid fa-ghost"></i>
+<h3>Horror</h3>
+<p>66 เรื่อง</p>
+</a>
+
+<a href="#" class="genre-card sci-fi">
+<i class="fa-solid fa-robot"></i>
+<h3>Sci-Fi</h3>
+<p>83 เรื่อง</p>
+</a>
+
+<a href="#" class="genre-card sports">
+<i class="fa-solid fa-futbol"></i>
+<h3>Sports</h3>
+<p>57 เรื่อง</p>
+</a>
+
+<a href="#" class="genre-card mystery">
+<i class="fa-solid fa-user-secret"></i>
+<h3>Mystery</h3>
+<p>48 เรื่อง</p>
+</a>
+
+<a href="#" class="genre-card music">
+<i class="fa-solid fa-music"></i>
+<h3>Music</h3>
+<p>35 เรื่อง</p>
+</a>
+
+<a href="#" class="genre-card school">
+<i class="fa-solid fa-school"></i>
+<h3>School</h3>
+<p>127 เรื่อง</p>
+</a>
+
+<a href="#" class="genre-card slice">
+<i class="fa-solid fa-mug-hot"></i>
+<h3>Slice of Life</h3>
+<p>95 เรื่อง</p>
+</a>
+
+</div>
+
+</section>
+
+<!--【15】Anime Schedule (อนิเมะสเกดูล) | ตารางฉาย-->
+<section class="schedule-section" id="schedule">
+
+<div class="section-header">
+<h2>ตารางฉายประจำสัปดาห์</h2>
+<a href="#">ดูทั้งหมด</a>
+</div>
+
+<div class="schedule-days">
+
+<button class="day active">จันทร์</button>
+<button class="day">อังคาร</button>
+<button class="day">พุธ</button>
+<button class="day">พฤหัส</button>
+<button class="day">ศุกร์</button>
+<button class="day">เสาร์</button>
+<button class="day">อาทิตย์</button>
+
+</div>
+
+<div class="schedule-list">
+<article class="schedule-card">
+<div class="schedule-time">08:00</div>
+<div class="schedule-cover"><img src="img/anime/one-piece.jpg" alt="One Piece"></div>
+<div class="schedule-info">
+<h3>One Piece</h3>
+<p>ตอนที่ 1135</p>
+<span>Adventure • Action</span>
+</div>
+<button class="schedule-btn"><i class="fa-solid fa-play"></i></button>
+</article>
+
+<article class="schedule-card">
+<div class="schedule-time">09:30</div>
+<div class="schedule-cover"><img src="img/anime/blue-lock.jpg" alt="Blue Lock"></div>
+<div class="schedule-info">
+<h3>Blue Lock</h3>
+<p>ตอนที่ 25</p>
+<span>Sport • Drama</span>
+</div>
+<button class="schedule-btn"><i class="fa-solid fa-play"></i></button>
+</article>
+
+<article class="schedule-card">
+<div class="schedule-time">11:00</div>
+<div class="schedule-cover"><img src="img/anime/sakamoto-days.jpg" alt="Sakamoto Days"></div>
+<div class="schedule-info">
+<h3>Sakamoto Days</h3>
+<p>ตอนที่ 11</p>
+<span>Action • Comedy</span>
+</div>
+<button class="schedule-btn"><i class="fa-solid fa-play"></i></button>
+</article>
+
+<article class="schedule-card">
+<div class="schedule-time">13:00</div>
+<div class="schedule-cover"><img src="img/anime/kaiju-no8.jpg" alt="Kaiju No.8"></div>
+<div class="schedule-info">
+<h3>Kaiju No.8</h3>
+<p>ตอนที่ 13</p>
+<span>Action • Sci-Fi</span>
+</div>
+<button class="schedule-btn"><i class="fa-solid fa-play"></i></button>
+</article>
+
+<article class="schedule-card">
+<div class="schedule-time">15:30</div>
+<div class="schedule-cover"><img src="img/anime/dandadan.jpg" alt="Dandadan"></div>
+<div class="schedule-info">
+<h3>Dandadan</h3>
+<p>ตอนที่ 13</p>
+<span>Comedy • Action</span>
+</div>
+<button class="schedule-btn"><i class="fa-solid fa-play"></i></button>
+</article>
+
+<article class="schedule-card">
+<div class="schedule-time">18:00</div>
+<div class="schedule-cover"><img src="img/anime/solo-leveling.jpg" alt="Solo Leveling"></div>
+<div class="schedule-info">
+<h3>Solo Leveling</h3>
+<p>ตอนที่ 14</p>
+<span>Fantasy • Action</span>
+</div>
+<button class="schedule-btn"><i class="fa-solid fa-play"></i></button>
+</article>
+
+<article class="schedule-card">
+<div class="schedule-time">20:00</div>
+<div class="schedule-cover"><img src="img/anime/frieren.jpg" alt="Frieren"></div>
+<div class="schedule-info">
+<h3>Frieren</h3>
+<p>ตอนที่ 29</p>
+<span>Fantasy • Adventure</span>
+</div>
+<button class="schedule-btn"><i class="fa-solid fa-play"></i></button>
+</article>
+
+<article class="schedule-card">
+<div class="schedule-time">22:00</div>
+<div class="schedule-cover"><img src="img/anime/chainsaw-man.jpg" alt="Chainsaw Man"></div>
+<div class="schedule-info">
+<h3>Chainsaw Man</h3>
+<p>ตอนที่ 13</p>
+<span>Action • Dark Fantasy</span>
+</div>
+<button class="schedule-btn"><i class="fa-solid fa-play"></i></button>
+</article>
+
+</div>
+
+</section>
+
+<!--【16】Recently Added (รีเซนต์ลี่แอดเด็ด) | เพิ่มล่าสุด-->
+<section class="recent-section" id="recent">
+
+<div class="section-header">
+<h2>เพิ่มล่าสุด</h2>
+<a href="#">ดูทั้งหมด</a>
+</div>
+
+<div class="recent-grid">
+
+<article class="recent-card">
+<img src="img/anime/solo-leveling.jpg" alt="Solo Leveling">
+<div class="recent-info">
+<h3>Solo Leveling</h3>
+<span>EP 13</span>
+</div>
+</article>
+
+<article class="recent-card">
+<img src="img/anime/dandadan.jpg" alt="Dandadan">
+<div class="recent-info">
+<h3>Dandadan</h3>
+<span>EP 12</span>
+</div>
+</article>
+
+<article class="recent-card">
+<img src="img/anime/kaiju-no8.jpg" alt="Kaiju No.8">
+<div class="recent-info">
+<h3>Kaiju No.8</h3>
+<span>EP 12</span>
+</div>
+</article>
+
+<article class="recent-card">
+<img src="img/anime/sakamoto-days.jpg" alt="Sakamoto Days">
+<div class="recent-info">
+<h3>Sakamoto Days</h3>
+<span>EP 10</span>
+</div>
+</article>
+
+<article class="recent-card">
+<img src="img/anime/frieren.jpg" alt="Frieren">
+<div class="recent-info">
+<h3>Frieren</h3>
+<span>EP 28</span>
+</div>
+</article>
+
+<article class="recent-card">
+<img src="img/anime/blue-lock.jpg" alt="Blue Lock">
+<div class="recent-info">
+<h3>Blue Lock</h3>
+<span>EP 24</span>
+</div>
+</article>
+
+</div>
+
+</section>
+
+<!--【17】Recommended (เรคคอมเมนเด็ด) | แนะนำสำหรับคุณ-->
+<section class="recommend-section" id="recommend">
+
+<div class="section-header">
+<h2>แนะนำสำหรับคุณ</h2>
+<a href="#">ดูทั้งหมด</a>
+</div>
+
+<div class="recommend-slider">
+<article class="recommend-card">
+<div class="recommend-poster">
+<img src="img/anime/solo-leveling.jpg" alt="Solo Leveling">
+<span class="quality">1080P</span>
+</div>
+<div class="recommend-content">
+<h3>Solo Leveling</h3>
+<p>Action • Fantasy</p>
+<div class="recommend-bottom">
+<span><i class="fa-solid fa-star"></i>9.8</span>
+<button class="watch-card-btn"><i class="fa-solid fa-play"></i>รับชม</button>
+</div>
+</div>
+</article>
+
+<article class="recommend-card">
+<div class="recommend-poster">
+<img src="img/anime/frieren.jpg" alt="Frieren">
+<span class="quality">1080P</span>
+</div>
+<div class="recommend-content">
+<h3>Frieren</h3>
+<p>Fantasy • Adventure</p>
+<div class="recommend-bottom">
+<span><i class="fa-solid fa-star"></i>9.9</span>
+<button class="watch-card-btn"><i class="fa-solid fa-play"></i>รับชม</button>
+</div>
+</div>
+</article>
+
+<article class="recommend-card">
+<div class="recommend-poster">
+<img src="img/anime/dandadan.jpg" alt="Dandadan">
+<span class="quality">1080P</span>
+</div>
+<div class="recommend-content">
+<h3>Dandadan</h3>
+<p>Comedy • Action</p>
+<div class="recommend-bottom">
+<span><i class="fa-solid fa-star"></i>9.6</span>
+<button class="watch-card-btn"><i class="fa-solid fa-play"></i>รับชม</button>
+</div>
+</div>
+</article>
+
+<article class="recommend-card">
+<div class="recommend-poster">
+<img src="img/anime/kaiju-no8.jpg" alt="Kaiju No.8">
+<span class="quality">1080P</span>
+</div>
+<div class="recommend-content">
+<h3>Kaiju No.8</h3>
+<p>Action • Sci-Fi</p>
+<div class="recommend-bottom">
+<span><i class="fa-solid fa-star"></i>9.5</span>
+<button class="watch-card-btn"><i class="fa-solid fa-play"></i>รับชม</button>
+</div>
+</div>
+</article>
+
+<article class="recommend-card">
+<div class="recommend-poster">
+<img src="img/anime/chainsaw-man.jpg" alt="Chainsaw Man">
+<span class="quality">1080P</span>
+</div>
+<div class="recommend-content">
+<h3>Chainsaw Man</h3>
+<p>Action • Dark Fantasy</p>
+<div class="recommend-bottom">
+<span><i class="fa-solid fa-star"></i>9.4</span>
+<button class="watch-card-btn"><i class="fa-solid fa-play"></i>รับชม</button>
+</div>
+</div>
+</article>
+
+<article class="recommend-card">
+<div class="recommend-poster">
+<img src="img/anime/one-piece.jpg" alt="One Piece">
+<span class="quality">1080P</span>
+</div>
+<div class="recommend-content">
+<h3>One Piece</h3>
+<p>Adventure • Action</p>
+<div class="recommend-bottom">
+<span><i class="fa-solid fa-star"></i>9.8</span>
+<button class="watch-card-btn"><i class="fa-solid fa-play"></i>รับชม</button>
+</div>
+</div>
+</article>
+
+</div>
+
+</section>
+
+<!--【18】News (นิวส์) | ข่าวสาร-->
+<section class="news-section" id="news">
+
+<div class="section-header">
+<h2>ข่าวสารอนิเมะ</h2>
+<a href="#">ข่าวทั้งหมด</a>
+</div>
+
+<div class="news-grid">
+
+<article class="news-card">
+<img src="img/news/news-1.jpg" alt="News">
+<div class="news-content">
+<span class="news-date">28 มิถุนายน 2026</span>
+<h3>Solo Leveling ประกาศสร้างซีซั่นใหม่</h3>
+<p>ทีมงานยืนยันการผลิตอย่างเป็นทางการ พร้อมปล่อยภาพโปรโมตแรก...</p>
+<a href="#" class="read-more">อ่านต่อ <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+</article>
+
+<article class="news-card">
+<img src="img/news/news-2.jpg" alt="News">
+<div class="news-content">
+<span class="news-date">27 มิถุนายน 2026</span>
+<h3>Dandadan ปล่อยตัวอย่างใหม่</h3>
+<p>เผยฉากต่อสู้ใหม่และกำหนดวันออกอากาศตอนถัดไป...</p>
+<a href="#" class="read-more">อ่านต่อ <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+</article>
+
+<article class="news-card">
+<img src="img/news/news-3.jpg" alt="News">
+<div class="news-content">
+<span class="news-date">26 มิถุนายน 2026</span>
+<h3>Kaiju No.8 ได้รับการยืนยันซีซั่น 2</h3>
+<p>แฟน ๆ เตรียมพบกับการกลับมาของคาฟก้าในภาคใหม่...</p>
+<a href="#" class="read-more">อ่านต่อ <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+</article>
+
+</div>
+
+</section>
+
+<!--【19】Footer (ฟุตเตอร์) | ส่วนท้ายเว็บไซต์-->
 <footer class="footer">
 
-    <div class="footer-logo">
-        <h2><span>Hoshi</span>ne</h2>
-    </div>
+<div class="footer-logo">
+<h2>Hoshi<span>ne</span></h2>
+<p>Anime Streaming Platform</p>
+</div>
 
-    <p>© 2026 Hoshine Anime. All Rights Reserved.</p>
+<div class="footer-links">
+
+<div class="footer-column">
+<h4>เมนู</h4>
+<a href="#">หน้าหลัก</a>
+<a href="#">อนิเมะทั้งหมด</a>
+<a href="#">กำลังมาแรง</a>
+<a href="#">ตารางฉาย</a>
+</div>
+
+<div class="footer-column">
+<h4>ผู้ใช้งาน</h4>
+<a href="#">เข้าสู่ระบบ</a>
+<a href="#">สมัครสมาชิก</a>
+<a href="#">รายการโปรด</a>
+<a href="#">ประวัติ</a>
+</div>
+
+<div class="footer-column">
+<h4>Hoshine</h4>
+<a href="#">เกี่ยวกับเรา</a>
+<a href="#">ติดต่อ</a>
+<a href="#">นโยบาย</a>
+<a href="#">ช่วยเหลือ</a>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+<p>© 2026 Hoshine. All Rights Reserved.</p>
+</div>
 
 </footer>
 
-        </main>
+<!--【20】Popup (ป๊อปอัป) | หน้าต่างแจ้งเตือน-->
+<div class="popup" id="popup"></div>
 
-    </div>
+<!--【21】Toast (โทสต์) | กล่องแจ้งเตือน-->
+<div class="toast" id="toast"></div>
 
-    <!-- โหลดไฟล์ JavaScript -->
-    <script src="js/app.js"></script>
+<!--【22】Back To Top (แบ็กทูท็อป) | ปุ่มกลับขึ้นด้านบน-->
+<button class="back-to-top" id="backToTop">
+<i class="fa-solid fa-chevron-up"></i>
+</button>
 
+<!-- JavaScript -->
+<script src="js/app.js"></script>
+<script src="js/player.js"></script>
+<script src="js/search.js"></script>
+
+</main>
+</div>
 </body>
 </html>
