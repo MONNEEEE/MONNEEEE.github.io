@@ -1,0 +1,163 @@
+/*══════════════════════════════════════════════
+【01】Root (รูท) | ตัวแปรหลักของเว็บไซต์
+══════════════════════════════════════════════*/
+
+:root{
+
+/*══════════════════════════
+【02】Colors (คัลเลอร์) | สีหลัก
+══════════════════════════*/
+
+--primary:#7C3AED;
+--primary-light:#8B5CF6;
+--primary-dark:#6D28D9;
+
+--secondary:#A855F7;
+
+--accent:#C084FC;
+
+--success:#22C55E;
+--warning:#F59E0B;
+--danger:#EF4444;
+--info:#3B82F6;
+
+/*══════════════════════════
+【03】Background (แบ็กกราวด์)
+══════════════════════════*/
+
+--bg:#09090B;
+--bg-secondary:#111113;
+--surface:#18181B;
+--surface-light:#202024;
+--surface-hover:#2A2A32;
+
+/*══════════════════════════
+【04】Text (เท็กซ์)
+══════════════════════════*/
+
+--text:#FFFFFF;
+--text-secondary:#C4C4CC;
+--text-muted:#8A8A95;
+--text-disabled:#5A5A63;
+
+/*══════════════════════════
+【05】Border (บอร์เดอร์)
+══════════════════════════*/
+
+--border:#2A2A32;
+--border-light:#3B3B44;
+--border-active:#7C3AED;
+
+/*══════════════════════════
+【06】Gradient (เกรเดียนต์)
+══════════════════════════*/
+
+--gradient-primary:linear-gradient(135deg,#7C3AED,#A855F7);
+
+--gradient-dark:linear-gradient(180deg,#09090B,#18181B);
+
+--gradient-card:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02));
+
+--gradient-overlay:linear-gradient(to top,rgba(0,0,0,.92),rgba(0,0,0,.2));
+
+/*══════════════════════════
+【07】Typography (ไทโปกราฟี)
+══════════════════════════*/
+
+--font:'Kanit',sans-serif;
+
+--hero-size:56px;
+--title-size:34px;
+--subtitle-size:24px;
+--card-title:20px;
+--body-size:16px;
+--small-size:14px;
+--tiny-size:12px;
+
+--light:300;
+--regular:400;
+--medium:500;
+--semi-bold:600;
+--bold:700;
+--extra-bold:800;
+
+/*══════════════════════════
+【08】Spacing (สเปซซิง)
+══════════════════════════*/
+
+--space-4:4px;
+--space-8:8px;
+--space-12:12px;
+--space-16:16px;
+--space-20:20px;
+--space-24:24px;
+--space-32:32px;
+--space-40:40px;
+--space-48:48px;
+--space-64:64px;
+
+/*══════════════════════════
+【09】Radius (เรเดียส)
+══════════════════════════*/
+
+--radius-sm:8px;
+--radius-md:12px;
+--radius-lg:18px;
+--radius-xl:24px;
+--radius-round:999px;
+
+/*══════════════════════════
+【10】Shadow (แชโดว์)
+══════════════════════════*/
+
+--shadow-sm:0 2px 8px rgba(0,0,0,.25);
+
+--shadow-md:0 8px 24px rgba(0,0,0,.35);
+
+--shadow-lg:0 15px 40px rgba(0,0,0,.5);
+
+--shadow-purple:0 0 25px rgba(124,58,237,.35);
+
+/*══════════════════════════
+【11】Transition (ทรานซิชัน)
+══════════════════════════*/
+
+--fast:.2s ease;
+
+--normal:.3s ease;
+
+--slow:.5s ease;
+
+/*══════════════════════════
+【12】Z-index (ซีอินเด็กซ์)
+══════════════════════════*/
+
+--z-background:-1;
+--z-default:1;
+--z-header:100;
+--z-sidebar:500;
+--z-dropdown:800;
+--z-modal:900;
+--z-toast:950;
+--z-loading:9999;
+
+/*══════════════════════════
+【13】Layout (เลย์เอาต์)
+══════════════════════════*/
+
+--sidebar-width:280px;
+--rightbar-width:340px;
+--header-height:80px;
+--content-width:1600px;
+
+/*══════════════════════════
+【14】Responsive (รีสปอนซีฟ)
+══════════════════════════*/
+
+--desktop:1400px;
+--laptop:1200px;
+--tablet:992px;
+--mobile:768px;
+--small-mobile:480px;
+
+}
