@@ -1,0 +1,106 @@
+/* ==========================================
+   Hoshine Variables
+   Version : 1.0
+   ========================================== */
+
+:root{
+
+    /* =========================
+       Colors
+    ========================= */
+
+    --color-primary: #8B5CF6;
+    --color-primary-hover: #7C3AED;
+
+    --color-background: #0F1117;
+    --color-surface: #1A1D29;
+    --color-surface-hover: #232838;
+
+    --color-border: #2D3446;
+
+    --color-text: #FFFFFF;
+    --color-text-secondary: #A3A8B8;
+    --color-text-muted: #6B7280;
+
+    --color-success: #22C55E;
+    --color-warning: #F59E0B;
+    --color-danger: #EF4444;
+    --color-info: #3B82F6;
+
+    /* =========================
+       Typography
+    ========================= */
+
+    --font-family: "Inter", sans-serif;
+
+    /* =========================
+       Font Size
+    ========================= */
+
+    --fs-h1: 40px;
+    --fs-h2: 32px;
+    --fs-h3: 24px;
+    --fs-h4: 20px;
+
+    --fs-body: 16px;
+    --fs-small: 14px;
+    --fs-caption: 12px;
+
+    /* =========================
+       Font Weight
+    ========================= */
+
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+
+    /* =========================
+       Border Radius
+    ========================= */
+
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --radius-full: 9999px;
+
+    /* =========================
+       Spacing
+    ========================= */
+
+    --space-4: 4px;
+    --space-8: 8px;
+    --space-12: 12px;
+    --space-16: 16px;
+    --space-20: 20px;
+    --space-24: 24px;
+    --space-32: 32px;
+    --space-40: 40px;
+    --space-48: 48px;
+    --space-64: 64px;
+
+    /* =========================
+       Shadow
+    ========================= */
+
+    --shadow-sm: 0 2px 8px rgba(0,0,0,.15);
+    --shadow-md: 0 6px 18px rgba(0,0,0,.25);
+    --shadow-lg: 0 12px 32px rgba(0,0,0,.35);
+
+    /* =========================
+       Transition
+    ========================= */
+
+    --transition-fast: .2s ease;
+    --transition-normal: .3s ease;
+    --transition-slow: .5s ease;
+
+    /* =========================
+       Container
+    ========================= */
+
+    --container-width: 1440px;
+
+}
