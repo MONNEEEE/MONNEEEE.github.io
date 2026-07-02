@@ -1,0 +1,94 @@
+/* ==========================================
+   Hoshine Responsive
+   Version : 1.0
+========================================== */
+
+
+/* ==========================================
+   Laptop (1024px - 1439px)
+========================================== */
+
+@media (max-width:1439px){
+
+    .container{
+        max-width:1200px;
+    }
+
+    .main-layout{
+        grid-template-columns:240px 1fr 300px;
+    }
+
+}
+
+
+/* ==========================================
+   Tablet (768px - 1023px)
+========================================== */
+
+@media (max-width:1023px){
+
+    .container{
+        padding:0 var(--space-16);
+    }
+
+    .main-layout{
+        grid-template-columns:220px 1fr;
+    }
+
+    .right-panel{
+        display:none;
+    }
+
+    .grid-6{
+        grid-template-columns:repeat(4,1fr);
+    }
+
+    .grid-5{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .grid-4{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+}
+
+
+/* ==========================================
+   Mobile (320px - 767px)
+========================================== */
+
+@media (max-width:767px){
+
+    .container{
+        padding:0 var(--space-16);
+    }
+
+    .main-layout{
+        grid-template-columns:1fr;
+    }
+
+    .sidebar{
+        display:none;
+    }
+
+    .right-panel{
+        display:none;
+    }
+
+    .main-content{
+        padding:var(--space-16);
+    }
+
+    .grid-6,
+    .grid-5,
+    .grid-4,
+    .grid-3{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .grid-2{
+        grid-template-columns:1fr;
+    }
+
+}
