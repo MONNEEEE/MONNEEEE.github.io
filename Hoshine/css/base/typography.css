@@ -1,0 +1,60 @@
+/* ==========================================
+   Hoshine Typography
+   Version : 1.0
+========================================== */
+
+body{
+    font-family: var(--font-family);
+    font-size: var(--fs-body);
+    font-weight: var(--fw-regular);
+    color: var(--color-text);
+    background: var(--color-background);
+    line-height: 1.6;
+}
+
+/* Heading */
+
+h1{
+    font-size: var(--fs-h1);
+    font-weight: var(--fw-bold);
+}
+
+h2{
+    font-size: var(--fs-h2);
+    font-weight: var(--fw-bold);
+}
+
+h3{
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-semibold);
+}
+
+h4{
+    font-size: var(--fs-h4);
+    font-weight: var(--fw-semibold);
+}
+
+/* Paragraph */
+
+p{
+    font-size: var(--fs-body);
+    color: var(--color-text-secondary);
+}
+
+/* Small */
+
+small{
+    font-size: var(--fs-small);
+    color: var(--color-text-muted);
+}
+
+/* Link */
+
+a{
+    color: inherit;
+    transition: color var(--transition-fast);
+}
+
+a:hover{
+    color: var(--color-primary);
+}
