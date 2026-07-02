@@ -1,0 +1,132 @@
+/* ==========================================
+   Hoshine Animation
+   Version : 1.0
+========================================== */
+
+/* ---------- Transition ---------- */
+
+.transition{
+    transition:all var(--transition-normal);
+}
+
+/* ---------- Hover ---------- */
+
+.hover-scale:hover{
+    transform:scale(1.03);
+}
+
+.hover-up:hover{
+    transform:translateY(-4px);
+}
+
+.hover-opacity:hover{
+    opacity:.8;
+}
+
+/* ---------- Fade ---------- */
+
+.fade-in{
+    animation:fadeIn .4s ease;
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+
+}
+
+/* ---------- Slide Up ---------- */
+
+.slide-up{
+    animation:slideUp .4s ease;
+}
+
+@keyframes slideUp{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* ---------- Slide Down ---------- */
+
+.slide-down{
+    animation:slideDown .4s ease;
+}
+
+@keyframes slideDown{
+
+    from{
+        opacity:0;
+        transform:translateY(-20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* ---------- Scale ---------- */
+
+.scale-in{
+    animation:scaleIn .3s ease;
+}
+
+@keyframes scaleIn{
+
+    from{
+        opacity:0;
+        transform:scale(.95);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+
+}
+
+/* ---------- Rotate ---------- */
+
+.rotate:hover{
+    transform:rotate(180deg);
+}
+
+/* ---------- Spinner ---------- */
+
+.spinner{
+
+    width:24px;
+    height:24px;
+
+    border:3px solid var(--color-border);
+    border-top-color:var(--color-primary);
+
+    border-radius:50%;
+
+    animation:spin 1s linear infinite;
+
+}
+
+@keyframes spin{
+
+    to{
+        transform:rotate(360deg);
+    }
+
+}
