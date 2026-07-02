@@ -1,0 +1,96 @@
+/* ==========================================
+   Hoshine Layout
+   Version : 1.0
+========================================== */
+
+/* Container */
+
+.container{
+    width:100%;
+    max-width:var(--container-width);
+    margin:0 auto;
+    padding:0 var(--space-24);
+}
+
+/* Main Layout */
+
+.main-layout{
+    display:grid;
+    grid-template-columns:280px 1fr 340px;
+    min-height:100vh;
+}
+
+/* Main Content */
+
+.main-content{
+    padding:var(--space-24);
+    overflow:hidden;
+}
+
+/* Right Panel */
+
+.right-panel{
+    padding:var(--space-24);
+}
+
+/* Section */
+
+.section{
+    margin-bottom:var(--space-32);
+}
+
+/* Grid */
+
+.grid{
+    display:grid;
+    gap:var(--space-24);
+}
+
+.grid-2{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.grid-3{
+    grid-template-columns:repeat(3,1fr);
+}
+
+.grid-4{
+    grid-template-columns:repeat(4,1fr);
+}
+
+.grid-5{
+    grid-template-columns:repeat(5,1fr);
+}
+
+.grid-6{
+    grid-template-columns:repeat(6,1fr);
+}
+
+/* Flex */
+
+.flex{
+    display:flex;
+}
+
+.flex-center{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.flex-between{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.flex-column{
+    display:flex;
+    flex-direction:column;
+}
+
+/* Hide */
+
+.hidden{
+    display:none;
+}
