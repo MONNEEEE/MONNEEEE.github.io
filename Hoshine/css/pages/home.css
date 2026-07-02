@@ -1,1 +1,176 @@
- 
+ *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#09090f;
+    color:#fff;
+    font-family:Arial,sans-serif;
+}
+
+.main-layout{
+    display:grid;
+    grid-template-columns:250px 1fr 320px;
+    gap:25px;
+    min-height:100vh;
+    padding:20px;
+}
+
+.sidebar,
+.right-sidebar{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.content{
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+}
+
+a{
+    color:white;
+    text-decoration:none;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+.sidebar{
+    background:#11111a;
+    border-radius:18px;
+    padding:20px;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:bold;
+    color:#9d4cff;
+    margin-bottom:35px;
+}
+
+.sidebar-nav{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.sidebar-item{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:14px 18px;
+    border-radius:12px;
+    transition:.25s;
+}
+
+.sidebar-item:hover{
+    background:#23233a;
+}
+
+.sidebar-item.active{
+    background:#8b5cf6;
+}
+.hero{
+    height:340px;
+    border-radius:20px;
+    overflow:hidden;
+    position:relative;
+}
+
+.hero img{
+    height:100%;
+    object-fit:cover;
+}
+
+.hero-content{
+    position:absolute;
+    left:45px;
+    bottom:45px;
+}
+
+.hero-content h1{
+    font-size:52px;
+    margin-bottom:10px;
+}
+
+.hero-content p{
+    color:#cfcfcf;
+    margin-bottom:20px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:15px;
+}
+
+.btn-primary{
+    background:#8b5cf6;
+    border:none;
+    color:#fff;
+    padding:14px 28px;
+    border-radius:12px;
+    cursor:pointer;
+}
+
+.btn-secondary{
+    background:#232338;
+    border:none;
+    color:#fff;
+    padding:14px 28px;
+    border-radius:12px;
+}
+.section{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.section-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.section-header h2{
+    font-size:24px;
+}
+
+.section-header a{
+    color:#9d4cff;
+}
+.anime-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:18px;
+}
+
+.anime-card{
+    background:#141420;
+    border-radius:14px;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.anime-card:hover{
+    transform:translateY(-6px);
+}
+
+.anime-card img{
+    height:230px;
+    object-fit:cover;
+}
+
+.anime-card h3{
+    padding:12px;
+    font-size:17px;
+}
+
+.anime-card p{
+    padding:0 12px 14px;
+    color:#aaa;
+}
