@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html lang="th">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Hoshine</title>
 
-    <!-- Base CSS -->
     <link rel="stylesheet" href="css/base/reset.css">
     <link rel="stylesheet" href="css/base/variables.css">
     <link rel="stylesheet" href="css/base/typography.css">
@@ -15,35 +12,422 @@
     <link rel="stylesheet" href="css/base/animation.css">
     <link rel="stylesheet" href="css/base/responsive.css">
 
-    <!-- Components -->
     <link rel="stylesheet" href="css/components/header.css">
     <link rel="stylesheet" href="css/components/sidebar.css">
 
-    <!-- Page -->
     <link rel="stylesheet" href="css/pages/home.css">
 </head>
 
 <body>
 
-    <div class="main-layout">
+<div class="main-layout">
 
-        <!-- Sidebar -->
-        <aside class="sidebar">
+    <aside class="sidebar">
+        <div class="logo">Hoshine</div>
 
-        </aside>
+        <nav class="sidebar-nav">
+            <a href="index.html" class="sidebar-item active">
+                <span>🏠</span>
+                <span>Home</span>
+            </a>
 
-        <!-- Main Content -->
-        <main class="main-content">
+            <a href="pages/search.html" class="sidebar-item">
+                <span>🔍</span>
+                <span>Search</span>
+            </a>
 
-        </main>
+            <a href="pages/news.html" class="sidebar-item">
+                <span>📰</span>
+                <span>News</span>
+            </a>
 
-        <!-- Right Panel -->
-        <aside class="right-panel">
+            <a href="pages/schedule.html" class="sidebar-item">
+                <span>📅</span>
+                <span>Schedule</span>
+            </a>
 
-        </aside>
+            <a href="pages/favorite.html" class="sidebar-item">
+                <span>❤️</span>
+                <span>Favorite</span>
+            </a>
+
+            <a href="pages/profile.html" class="sidebar-item">
+                <span>👤</span>
+                <span>Profile</span>
+            </a>
+
+            <a href="pages/notification.html" class="sidebar-item">
+                <span>🔔</span>
+                <span>Notification</span>
+            </a>
+
+            <a href="pages/settings.html" class="sidebar-item">
+                <span>⚙️</span>
+                <span>Settings</span>
+            </a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="header">
+            <div class="header-left">
+                <h2>Home</h2>
+            </div>
+
+            <div class="header-center">
+                <input type="text" class="search-input" placeholder="Search Anime...">
+            </div>
+
+            <div class="header-right">
+                <button class="header-icon">🔔</button>
+                <button class="header-icon">👤</button>
+            </div>
+        </header>
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <span class="hero-tag">
+            CONTINUE WATCHING
+        </span>
+
+        <h1>
+            Solo Leveling
+        </h1>
+
+        <p>
+            Episode 13
+        </p>
+
+        <div class="hero-progress">
+            <div class="hero-progress-bar"></div>
+        </div>
+
+        <div class="hero-buttons">
+            <a href="pages/watch.html" class="btn-primary">
+                ▶ Watch Now
+            </a>
+
+            <a href="pages/anime-detail.html" class="btn-secondary">
+                More Info
+            </a>
+        </div>
 
     </div>
 
-</body>
+    <div class="hero-image">
 
+        <img
+            src="assets/images/banner/solo-leveling.jpg"
+            alt="Solo Leveling"
+        >
+
+    </div>
+
+</section>
+
+<section class="section">
+
+    <div class="section-header">
+
+        <h2>Continue Watching</h2>
+
+        <a href="#">
+            ดูทั้งหมด →
+        </a>
+
+    </div>
+
+    <div class="anime-grid">
+
+        <div class="anime-card">
+
+            <img src="assets/images/anime/solo.jpg" alt="">
+
+            <h3>Solo Leveling</h3>
+
+            <p>EP 13</p>
+
+        </div>
+
+        <div class="anime-card">
+
+            <img src="assets/images/anime/jjk.jpg" alt="">
+
+            <h3>Jujutsu Kaisen</h3>
+
+            <p>EP 20</p>
+
+        </div>
+
+        <div class="anime-card">
+
+            <img src="assets/images/anime/demon.jpg" alt="">
+
+            <h3>Demon Slayer</h3>
+
+            <p>EP 7</p>
+
+        </div>
+
+        <div class="anime-card">
+
+            <img src="assets/images/anime/frieren.jpg" alt="">
+
+            <h3>Frieren</h3>
+
+            <p>EP 15</p>
+
+        </div>
+
+        <div class="anime-card">
+
+            <img src="assets/images/anime/op.jpg" alt="">
+
+            <h3>One Piece</h3>
+
+            <p>EP 1109</p>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="section">
+
+    <div class="section-header">
+        <h2>Recently Watching</h2>
+        <a href="#">ดูทั้งหมด →</a>
+    </div>
+
+    <div class="anime-grid">
+
+        <div class="anime-card">
+            <img src="assets/images/anime/rezero.jpg" alt="">
+            <h3>Re:Zero S3</h3>
+            <p>EP 4</p>
+        </div>
+
+        <div class="anime-card">
+            <img src="assets/images/anime/eminence.jpg" alt="">
+            <h3>Eminence in Shadow</h3>
+            <p>EP 7</p>
+        </div>
+
+        <div class="anime-card">
+            <img src="assets/images/anime/vinland.jpg" alt="">
+            <h3>Vinland Saga S2</h3>
+            <p>EP 16</p>
+        </div>
+
+        <div class="anime-card">
+            <img src="assets/images/anime/oshi.jpg" alt="">
+            <h3>Oshi no Ko S2</h3>
+            <p>EP 9</p>
+        </div>
+
+        <div class="anime-card">
+            <img src="assets/images/anime/mashle.jpg" alt="">
+            <h3>Mashle</h3>
+            <p>EP 12</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section">
+
+    <div class="section-header">
+        <h2>Favorite</h2>
+        <a href="#">ดูทั้งหมด →</a>
+    </div>
+
+    <div class="anime-grid">
+
+        <div class="anime-card">
+            <img src="assets/images/anime/aot.jpg" alt="">
+            <h3>Attack on Titan</h3>
+        </div>
+
+        <div class="anime-card">
+            <img src="assets/images/anime/steinsgate.jpg" alt="">
+            <h3>Steins;Gate</h3>
+        </div>
+
+        <div class="anime-card">
+            <img src="assets/images/anime/codegeass.jpg" alt="">
+            <h3>Code Geass</h3>
+        </div>
+
+        <div class="anime-card">
+            <img src="assets/images/anime/clannad.jpg" alt="">
+            <h3>Clannad</h3>
+        </div>
+
+        <div class="anime-card">
+            <img src="assets/images/anime/yourname.jpg" alt="">
+            <h3>Your Name.</h3>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section">
+
+    <div class="section-header">
+        <h2>Watch Later</h2>
+        <a href="#">ดูทั้งหมด →</a>
+    </div>
+
+    <div class="anime-grid">
+
+        <div class="anime-card">
+            <img src="assets/images/anime/bleach.jpg" alt="">
+            <h3>Bleach</h3>
+        </div>
+
+        <div class="anime-card">
+            <img src="assets/images/anime/op.jpg" alt="">
+            <h3>One Piece</h3>
+        </div>
+
+        <div class="anime-card">
+            <img src="assets/images/anime/blackclover.jpg" alt="">
+            <h3>Black Clover</h3>
+        </div>
+
+        <div class="anime-card">
+            <img src="assets/images/anime/tokyo.jpg" alt="">
+            <h3>Tokyo Revengers</h3>
+        </div>
+
+        <div class="anime-card">
+            <img src="assets/images/anime/chainsaw.jpg" alt="">
+            <h3>Chainsaw Man</h3>
+        </div>
+
+    </div>
+
+</section>
+<aside class="right-sidebar">
+
+    <!-- Statistics -->
+
+    <div class="widget">
+
+        <h3>Statistics</h3>
+
+        <div class="stats-grid">
+
+            <div class="stat-card">
+                <span>Anime</span>
+                <h2>12</h2>
+                <small>This Week</small>
+            </div>
+
+            <div class="stat-card">
+                <span>Episodes</span>
+                <h2>48</h2>
+                <small>Watched</small>
+            </div>
+
+            <div class="stat-card">
+                <span>Watch Time</span>
+                <h2>18h</h2>
+                <small>36m</small>
+            </div>
+
+            <div class="stat-card">
+                <span>Streak</span>
+                <h2>7</h2>
+                <small>Days</small>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Calendar -->
+
+    <div class="widget">
+
+        <h3>Calendar</h3>
+
+        <div class="calendar-box">
+
+            <p>May 2024</p>
+
+            <div class="calendar-grid">
+
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>5</span>
+                <span>6</span>
+                <span>7</span>
+                <span>8</span>
+                <span>9</span>
+                <span>10</span>
+                <span>11</span>
+                <span>12</span>
+                <span>13</span>
+                <span>14</span>
+                <span>15</span>
+                <span class="active-day">16</span>
+                <span>17</span>
+                <span>18</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Recent Activity -->
+
+    <div class="widget">
+
+        <h3>Recent Activity</h3>
+
+        <ul class="activity-list">
+
+            <li>Watched Solo Leveling EP.13</li>
+
+            <li>Watched Jujutsu Kaisen EP.20</li>
+
+            <li>Added Frieren to Favorite</li>
+
+            <li>Rated Attack on Titan ⭐⭐⭐⭐⭐</li>
+
+        </ul>
+
+    </div>
+
+    <!-- Quote -->
+
+    <div class="widget quote-card">
+
+        <p>
+
+            "To watch is to live."
+
+        </p>
+
+    </div>
+
+</aside>
+    </main>
+
+    <aside class="right-panel"></aside>
+
+</div>
+
+<script src="js/pages/home.js"></script>
+
+</body>
 </html>
